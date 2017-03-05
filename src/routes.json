@@ -13,8 +13,32 @@
     "chunk": "main"
   },
   {
-    "path": "/about",
-    "page": "./about"
+    "path": "/categories",
+    "page": "./categories"
+  },
+  {
+    "path": "/science",
+    "page": "./science"
+  },
+  {
+    "path": "/sport",
+    "page": "./sport"
+  },
+  {
+    "path": "/images",
+    "page": "./images"
+  },
+  {
+    "path": "/musics",
+    "page": "./musics"
+  },
+  {
+    "path": "/physical",
+    "page": "./physical"
+  },
+  {
+    "path": "/S1",
+    "page": "./S1"
   },
   {
     "path": "/tasks/:status(pending|completed)?",

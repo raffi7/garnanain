@@ -19,7 +19,7 @@ import history from '../history';
 class AboutPage extends React.Component {
 
   componentDidMount() {
-    document.title = 'Home';
+    document.title = 'my txt';
   }
 
   gotoCategories() {
@@ -37,8 +37,8 @@ class AboutPage extends React.Component {
           <Grid className="demo-grid-1" style={{
             marginTop: '100px'
           }}>
-            <Cell col={12}>
-              <Card shadow={5} style={{
+            <Cell col={6}>
+              <Card shadow={0} style={{
                 width: '300px',
                 margin: 'auto'
               }}>
@@ -49,6 +49,24 @@ class AboutPage extends React.Component {
                 }}>
                   Մարզիկներ
                 </CardTitle>
+                <CardActions border>
+                  <Button colored style={{
+                    fontSize: 20
+                  }} onClick={this.gotoCategories}>start</Button>
+                </CardActions>
+              </Card>
+            </Cell>
+            <Cell col={6}>
+              <Card shadow={0} style={{
+                width: '300px',
+                margin: 'auto'
+              }}>
+                <CardTitle style={{
+                  color: '#fff',
+                  height: '176px',
+                  backgroundColor: '#FFC107'
+                }}>
+                  Հաւելեալ</CardTitle>
                 <CardActions border>
                   <Button colored style={{
                     fontSize: 20

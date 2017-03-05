@@ -7,7 +7,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE.txt file in the root directory of this source tree.
  */
-
+import localforage from 'localforage';
 import 'babel-polyfill';
 import 'whatwg-fetch';
 
@@ -19,6 +19,7 @@ import { Provider } from 'react-redux';
 import store from './store';
 import router from './router';
 import history from './history';
+
 
 let routes = require('./routes.json').default; // Loaded with utils/routes-loader.js
 
@@ -53,3 +54,7 @@ if (module.hot) {
     render(history.location);
   });
 }
+
+localforage.config({
+  name: 'Garnanain',
+});

@@ -13,3 +13,13 @@
     padding: 0 16px;
   }
 }
+
+.fontstyle1 {
+  font-family: "FreeSerif", Georgia, Serif;
+  font-size: 55px;
+}
+
+.buttonfontstyle {
+  font-family: "FreeSerif", Georgia, Serif;
+  font-size: 35px;
+}

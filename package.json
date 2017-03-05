@@ -12,9 +12,13 @@
     "fastclick": "^1.0.6",
     "history": "^4.5.1",
     "react": "^15.4.2",
+    "react-audio": "0.0.1",
+    "react-audio-player": "^0.3.2",
+    "react-countdown-clock": "^1.0.9",
     "react-dom": "^15.4.2",
     "react-mdl": "^1.9.0",
     "react-redux": "^5.0.2",
+    "react-timer": "^1.0.2",
     "redux": "^3.6.0",
     "whatwg-fetch": "^2.0.2"
   },
