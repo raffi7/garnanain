@@ -32,8 +32,9 @@ class Navigation extends React.Component {
       <nav className="mdl-navigation" ref={node => (this.root = node)}>
         <Link className="mdl-navigation__link" to="/categories">Categories</Link>
         <Link className="mdl-navigation__link" to="/">Home</Link>
-        <IconButton onClick={this.gotoCategories} name="timeline"/>
-        <Tooltip label="Setting" position="bottom">
+        <Tooltip label="Results" position="bottom">
+        <IconButton onClick={this.gotoCategories} name="timeline"/></Tooltip>
+        <Tooltip label="Categories" position="bottom">
           <div style={{position: 'relative'}}>
     <IconButton name="more_vert" id="demo-menu-lower-right" />
     <Menu target="demo-menu-lower-right" align="right" ripple>

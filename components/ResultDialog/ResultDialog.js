@@ -63,7 +63,7 @@ class ResultDialog extends React.Component {
       <Dialog style={{backgroundColor: '#8bc34a'}} open={this.state.openDialogCorrect}>
         <DialogTitle style={{color: '#fff', fontSize: '50px'}} >Correct !!</DialogTitle>
         <DialogContent>
-          <p style={{color: '#263238', fontSize: '25px', marginTop: '15px'}}>+5 Նիշ</p>
+          <p style={{color: '#263238', fontSize: '25px', marginTop: '15px'}}>+{this.props.score} Նիշ</p>
         </DialogContent>
         <DialogActions>
           <Button type='button' onClick={this.handleCloseDialog}>Close</Button>
