@@ -22,23 +22,25 @@ class Navigation extends React.Component {
     window.componentHandler.downgradeElements(this.root);
   }
 
+
   render() {
     return (
       <nav className="mdl-navigation" ref={node => (this.root = node)}>
+        <Link className="mdl-navigation__link" to="/categories">Categories</Link>
         <Link className="mdl-navigation__link" to="/">Home</Link>
         <Tooltip label="Setting" position="bottom">
+
           <div style={{position: 'relative'}}>
     <IconButton name="more_vert" id="demo-menu-lower-right" />
     <Menu target="demo-menu-lower-right" align="right" ripple>
-      <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" to="/categories">** Categories **</Link></MenuItem>
       <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" to="/science">* Science *</Link></MenuItem>
       <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" to="/sport">* Sport *</Link></MenuItem>
       <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" to="/images">* Images *</Link></MenuItem>
       <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" to="/musics">* Musics *</Link></MenuItem>
       <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" to="/physical">* Activities *</Link></MenuItem>
     </Menu>
-</div>
-</Tooltip>
+        </div>
+        </Tooltip>
       </nav>
     );
   }

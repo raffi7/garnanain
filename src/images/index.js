@@ -105,7 +105,7 @@ class AboutPage extends React.Component {
               10
             </FABButton>
           </Cell></Grid>
-          <Timer timeout={5}/>
+        <Timer timeout={60}/>
         </div>
       </Layout>
     );

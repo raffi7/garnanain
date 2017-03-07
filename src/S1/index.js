@@ -48,7 +48,9 @@ class AboutPage extends React.Component {
     });
   }
 
+
   render() {
+    const { isSnackbarActive } = this.state;
     return (
       <Layout className={s.content}>
         <h1 className={s.questionFont} style={{

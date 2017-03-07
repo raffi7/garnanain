@@ -77,7 +77,7 @@ class AboutPage extends React.Component {
           <Grid className="demo-grid-1" style={{
           }}>
             <Cell col={2}>
-              <QButton text="1" onClick={() => this.makeSeen(1)} seen={this.state.seen[1]}/>
+              <QButton text="1" onClick={() => this.makeSeen(1)} goto={() => this.gotoCategories} seen={this.state.seen[1]}/>
             </Cell>
             <Cell col={2}>
             <QButton text="2" onClick={() => this.makeSeen(2)} seen={this.state.seen[2]}/>

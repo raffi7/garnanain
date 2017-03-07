@@ -8,11 +8,13 @@ import {
   CardActions,
   IconButton,
   Grid,
-  Cell
+  Cell,
+  Tooltip
 } from 'react-mdl';
+import db from 'localforage';
 import Layout from '../../components/Layout';
 import s from './styles.css';
-import Picture from './pic1.png';
+import homepic from './homepic.jpeg';
 import Link from '../../components/Link';
 import history from '../history';
 
@@ -23,37 +25,52 @@ class AboutPage extends React.Component {
   }
 
   gotoCategories() {
-    history.push({pathname: '/categories'}); // go to page function
+    history.push({ pathname: '/categories' });
+  }
+
+  clearDb = () => {
+    db.setItem('science', {})
+    .catch((err) => {
+      console.log(err);
+    });
   }
 
   render() {
     return (
       <Layout className={s.content}>
-        <h1 className={s.fontstyle1}>Ընդհանուր Գլուխ</h1>
+        <h1 className={s.fontstyle1}>Տուն</h1>
         <div style={{
           width: '100%',
           margin: 'auto'
         }}>
           <Grid className="demo-grid-1" style={{
-            marginTop: '100px'
+            marginTop: '20px'
           }}>
             <Cell col={12}>
               <Card shadow={5} style={{
-                width: '300px',
+                width: '400px',
                 margin: 'auto'
               }}>
                 <CardTitle style={{
                   color: '#fff',
                   height: '176px',
-                  backgroundColor: '#009688'
+                  background: `url(${homepic}) center / cover`
                 }}>
-                  Մարզիկներ
                 </CardTitle>
+                <CardText>
+                29-րդ Գարնանային խաղեր
+                </CardText>
                 <CardActions border>
                   <Button colored style={{
                     fontSize: 20
                   }} onClick={this.gotoCategories}>start</Button>
                 </CardActions>
+                <CardMenu style={{color: '#fff'}}>
+                  <Tooltip label="Restart Game" position="left">
+                    <IconButton name="toys" style={{color: '#607d8b'}} onClick={this.clearDb} />
+                  </Tooltip>
+
+                </CardMenu>
               </Card>
             </Cell>
           </Grid>

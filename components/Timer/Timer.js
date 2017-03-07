@@ -102,7 +102,7 @@ class Timer extends React.Component {
       <Dialog open={this.state.openDialog}>
         <DialogTitle >Time Out !!</DialogTitle>
         <DialogContent>
-          <p>Ժամանակը Սպառւած է</p>
+          <p>Ժամանակը սպառւած է:</p>
         </DialogContent>
         <DialogActions>
           <Button type='button' onClick={this.handleCloseDialog}>Close</Button>
