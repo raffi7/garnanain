@@ -27,7 +27,8 @@ import {
   Dialog,
   DialogTitle,
   DialogContent,
-  DialogActions
+  DialogActions,
+  Badge
 } from 'react-mdl';
 import cx from 'classnames';
 import Header from './Header';
@@ -81,17 +82,20 @@ constructor() {
           // backgroundColor: '#fff'
           }} className="mdl-layout__content">
           <Card shadow={3} className={s.scoreBoard}>
-            <div style={{width: '80%', margin: 'auto'}}>
-      <Grid className="demo-grid-ruler">
-          <Cell col={2}>
-            <Button raised ripple onClick={() => this.addScore(1)}>
-              <span style={{color: 'red', fontSize: '20px' }}>+</span>{this.state.scores[1]}
-              </Button>
-              </Cell>
-          <Cell col={2}><Button raised ripple><span style={{color: 'blue', fontSize: '20px' }}>+</span>Team2 56</Button></Cell>
-
-      </Grid>
-  </div>
+            <div style={{width: '90%', margin: 'auto'}}>
+                <IconButton colored style={{backgroundColor: '#26a69a'}}raised ripple onClick={() => this.addScore(1)} name="add" />
+                <Badge text={this.state.scores[1]}>Team1</Badge>
+                <IconButton colored style={{backgroundColor: '#26a69a',marginLeft: '10px'}} raised ripple onClick={() => this.addScore(2)} name="add" />
+                <Badge text={this.state.scores[2]}>Team2</Badge>
+                <IconButton colored style={{backgroundColor: '#26a69a',marginLeft: '10px'}} raised ripple onClick={() => this.addScore(3)} name="add" />
+                <Badge text={this.state.scores[3]}>Team3</Badge>
+                <IconButton colored style={{backgroundColor: '#26a69a',marginLeft: '10px'}} raised ripple onClick={() => this.addScore(4)} name="add" />
+                <Badge text={this.state.scores[4]}>Team4</Badge>
+                <IconButton colored style={{backgroundColor: '#26a69a',marginLeft: '10px'}} raised ripple onClick={() => this.addScore(5)} name="add" />
+                <Badge text={this.state.scores[5]}>Team5</Badge>
+                <IconButton colored style={{backgroundColor: '#26a69a',marginLeft: '10px'}} raised ripple onClick={() => this.addScore(6)} name="add" />
+                <Badge text={this.state.scores[6]}>Team6</Badge>
+          </div>
 
           </Card>
             <div {...this.props} className={cx(s.content, this.props.className)}/>

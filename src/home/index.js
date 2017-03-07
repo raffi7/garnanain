@@ -1,4 +1,4 @@
-import React from 'react';
+  import React from 'react';
 import {
   Button,
   CardText,
@@ -30,6 +30,11 @@ class AboutPage extends React.Component {
 
   clearDb = () => {
     db.setItem('science', {})
+    .catch((err) => {
+      console.log(err);
+    });
+
+    db.setItem('scores', {})
     .catch((err) => {
       console.log(err);
     });

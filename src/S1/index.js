@@ -17,10 +17,7 @@ import {
   Dialog,
   DialogTitle,
   DialogContent,
-  DialogActions,
-  List,
-  ListItem,
-  ListItemContent
+  DialogActions
 } from 'react-mdl';
 import Layout from '../../components/Layout';
 import ResultDialog from '../../components/ResultDialog';
@@ -71,20 +68,9 @@ export default class Question extends React.Component {
         <Cell col={1}>
           <IconButton name="arrow_back" colored onClick={this.gotoScience}/>
         </Cell>
-        <Cell col={11} className={s.questionFont}>Հարց առաջին...kjlgkjtregrthth <br/>rgregt </Cell>
+        <Cell col={11} className={s.questionFont}>Որ Երաժիշտ և երքահանն էր խլականջ</Cell>
           </Grid>
      </h1>
-     <List>
-  <ListItem>
-    <IconButton name="star" onClick={this.gotoScience}></IconButton>
-  </ListItem>
-  <ListItem>
-    <ListItemContent><IconButton name="star" onClick={this.gotoScience} /> Aaron Paul</ListItemContent>
-  </ListItem>
-  <ListItem>
-    <ListItemContent icon="person">Bob Odenkirk</ListItemContent>
-  </ListItem>
-</List>
 
         <Grid className="demo-grid-1">
           <Cell col={3}><AnswerCard text="1st Answer" onClick={this.correct} /></Cell>
@@ -92,7 +78,7 @@ export default class Question extends React.Component {
           <Cell col={3}><AnswerCard text="3rd Answer" onClick={this.wrong} /></Cell>
           <Cell col={3}><AnswerCard text="4th Answer" onClick={this.wrong} /></Cell>
         </Grid>
-        <ResultDialog score="10" correct={this.state.openDialogCorrect} wrong={this.state.openDialogWrong} />
+        <ResultDialog score="5" correct={this.state.openDialogCorrect} wrong={this.state.openDialogWrong} />
       </Layout>
     );
   }

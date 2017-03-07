@@ -11,7 +11,7 @@
 import React from 'react';
 import history from '../../src/history';
 import Link from '../Link';
-import {IconButton, MenuItem, Menu, Tooltip } from 'react-mdl';
+import {IconButton, MenuItem, Menu, Tooltip, Icon } from 'react-mdl';
 
 class Navigation extends React.Component {
 
@@ -38,11 +38,12 @@ class Navigation extends React.Component {
           <div style={{position: 'relative'}}>
     <IconButton name="more_vert" id="demo-menu-lower-right" />
     <Menu target="demo-menu-lower-right" align="right" ripple>
-      <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" to="/science">* Science *</Link></MenuItem>
-      <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" to="/sport">* Sport *</Link></MenuItem>
-      <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" to="/images">* Images *</Link></MenuItem>
-      <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" to="/musics">* Musics *</Link></MenuItem>
-      <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" to="/physical">* Activities *</Link></MenuItem>
+      <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" to="/science">Science</Link></MenuItem>
+      <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" to="/sport">Sport</Link></MenuItem>
+      <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" to="/images">Images</Link></MenuItem>
+      <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" to="/musics">Musics</Link></MenuItem>
+      <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" to="/physical">Activities</Link></MenuItem>
+      <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" style={{fontSize: '18', color: '#607d8b'}} to="/setting">Setting</Link></MenuItem>
     </Menu>
         </div>
         </Tooltip>
