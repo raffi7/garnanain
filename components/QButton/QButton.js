@@ -21,8 +21,14 @@ import {
   DialogContent,
   DialogActions
 } from 'react-mdl';
+import history from '../../src/history';
+
 
 class QButton extends React.Component {
+  click = () => {
+    this.props.onClick();
+    history.push({ pathname: this.props.goto })
+  }
   render() {
     let color = '#4db6ac';
     if (this.props.seen) {
@@ -30,7 +36,7 @@ class QButton extends React.Component {
     }
 
     return (
-      <FABButton onClick={this.props.onClick} ripple colored style={{ backgroundColor: color, fontSize: '32px' }}>
+      <FABButton onClick={this.click} ripple colored style={{ backgroundColor: color, fontSize: '32px' }}>
         {this.props.text}
       </FABButton>
     )

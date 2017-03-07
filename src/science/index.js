@@ -49,12 +49,7 @@ class AboutPage extends React.Component {
     });
   }
 
-  clearDb = () => {
-    db.setItem('science', {})
-    .catch((err) => {
-      console.log(err);
-    });
-  }
+
   render() {
     return (
       <Layout className={s.content}>
@@ -68,7 +63,6 @@ class AboutPage extends React.Component {
           </Cell>
           <Cell col={7}>Գիտական</Cell>
             </Grid>
-            <IconButton name="stop" colored onClick={this.clearDb}/>
        </h1>
         <div style={{
           width: '100%',
@@ -77,10 +71,10 @@ class AboutPage extends React.Component {
           <Grid className="demo-grid-1" style={{
           }}>
             <Cell col={2}>
-              <QButton text="1" onClick={() => this.makeSeen(1)} goto={() => this.gotoCategories} seen={this.state.seen[1]}/>
+              <QButton text="1" onClick={() => this.makeSeen(1)} goto="/S1" seen={this.state.seen[1]}/>
             </Cell>
             <Cell col={2}>
-            <QButton text="2" onClick={() => this.makeSeen(2)} seen={this.state.seen[2]}/>
+            <QButton text="2" onClick={() => this.makeSeen(2)} goto="/S1" seen={this.state.seen[2]}/>
             </Cell>
             <Cell col={2}>
               <QButton text="3" onClick={() => this.makeSeen(3)} seen={this.state.seen[3]}/>

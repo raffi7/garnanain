@@ -9,6 +9,7 @@
  */
 
 import React from 'react';
+import history from '../../src/history';
 import Link from '../Link';
 import {IconButton, MenuItem, Menu, Tooltip } from 'react-mdl';
 
@@ -21,6 +22,9 @@ class Navigation extends React.Component {
   componentWillUnmount() {
     window.componentHandler.downgradeElements(this.root);
   }
+  gotoCategories() {
+    history.push({ pathname: '/categories' });
+  }
 
 
   render() {
@@ -28,8 +32,8 @@ class Navigation extends React.Component {
       <nav className="mdl-navigation" ref={node => (this.root = node)}>
         <Link className="mdl-navigation__link" to="/categories">Categories</Link>
         <Link className="mdl-navigation__link" to="/">Home</Link>
+        <IconButton onClick={this.gotoCategories} name="timeline"/>
         <Tooltip label="Setting" position="bottom">
-
           <div style={{position: 'relative'}}>
     <IconButton name="more_vert" id="demo-menu-lower-right" />
     <Menu target="demo-menu-lower-right" align="right" ripple>
