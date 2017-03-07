@@ -16,5 +16,6 @@
 
 .questionFont {
   font-family: "DejaVu Serif", Georgia, Serif;
-  font-size: 55px;
+  font-size: 50px;
+  margin-top: 60px;
 }

@@ -20,6 +20,7 @@ import {
   DialogActions
 } from 'react-mdl';
 import Layout from '../../components/Layout';
+import ResultDialog from '../../components/ResultDialog';
 import s from './styles.css';
 import Link from '../../components/Link';
 import history from '../history';
@@ -27,50 +28,74 @@ import history from '../history';
 class AboutPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
-    this.handleOpenDialog = this.handleOpenDialog.bind(this);
-    this.handleCloseDialog = this.handleCloseDialog.bind(this);
+    this.state = {
+      openDialogCorrect: false,
+      openDialogWrong: false
+    };
   }
 
   componentDidMount() {
-    document.title = 'Գիտական';
+    document.title = 'Գ1';
     setInterval(this.addCounter, 1000);
   }
 
-  handleOpenDialog() {
+  handleOpenDialogCorrect = () => {
     this.setState({
-      openDialog: true
+      openDialogCorrect: true,
+      openDialogWrong: false,
     });
   }
-  handleCloseDialog() {
+  handleOpenDialogWorng = () => {
     this.setState({
-      openDialog: false
+      openDialogWrong: true,
+      openDialogCorrect: false,
+    });
+  }
+  handleCloseDialog = () => {
+    this.setState({
+      openDialogCorrect: false,
+      openDialogWrong: false
     });
   }
 
 
   render() {
-    const { isSnackbarActive } = this.state;
     return (
       <Layout className={s.content}>
-        <h1 className={s.questionFont} style={{
-          marginTop: '30px'
-        }}>Հարց առաջին... </h1>
-        <div style={{
-          width: '100%',
-          fontSize: '30px'
-        }}>
-        <Button colored onClick={this.handleOpenDialog} raised ripple>Show Dialog</Button>
-      <Dialog open={this.state.openDialog}>
-        <DialogTitle>Allow data collection?</DialogTitle>
-        <DialogContent>
-          <p>Allowing us to collect data will let us get you the information you want faster.</p>
-        </DialogContent>
-        <DialogActions>
-          <Button type='button' onClick={this.handleCloseDialog}>Close</Button>
-        </DialogActions>
-      </Dialog>
-        </div>
+        <h1 className={s.questionFont}>Հարց առաջին... </h1>
+          <Grid className="demo-grid-1">
+          <Cell col={3}>
+            <Card onClick={this.handleOpenDialogCorrect} shadow={0} style={{width: '240px', minHeight: '150px', background: '#3E4EB8'}}>
+      <CardTitle expand style={{alignItems: 'flex-start', color: '#fff'}}>
+          <h4 style={{marginTop: '0'}}>
+            1
+          </h4>
+    </CardTitle>
+</Card>
+</Cell>
+<Cell col={3}><Card onClick={this.handleOpenDialogWorng} shadow={0} style={{width: '240px', minHeight: '150px', background: '#3E4EB8'}}>
+<CardTitle expand style={{alignItems: 'flex-start', color: '#fff'}}>
+<h4 style={{marginTop: '0'}}>
+  2
+</h4>
+</CardTitle>
+</Card></Cell>
+<Cell col={3}><Card onClick={this.handleOpenDialogWorng} shadow={0} style={{width: '240px', minHeight: '150px', background: '#3E4EB8'}}>
+<CardTitle expand style={{alignItems: 'flex-start', color: '#fff'}}>
+<h4 style={{marginTop: '0'}}>
+</h4>
+</CardTitle>
+</Card></Cell>
+<Cell col={3}><Card onClick={this.handleOpenDialogWorng} shadow={0} style={{width: '240px', minHeight: '150px', background: '#3E4EB8'}}>
+<CardTitle expand style={{alignItems: 'flex-start', color: '#fff'}}>
+<h4 style={{marginTop: '0'}}>
+</h4>
+</CardTitle>
+</Card></Cell>
+
+</Grid>
+<ResultDialog correct={this.state.openDialogCorrect} wrong={this.state.openDialogWrong}></ResultDialog>
+
       </Layout>
     );
   }

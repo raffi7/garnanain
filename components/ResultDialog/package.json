@@ -1,0 +1,6 @@
+{
+  "name": "ResultDialog",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./ResultDialog.js"
+}
