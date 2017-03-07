@@ -38,7 +38,7 @@ class ResultDialog extends React.Component {
       openDialogWrong: false,
     });
   }
-  handleOpenDialogWorng = () => {
+  handleOpenDialogWrong = () => {
     this.setState({
       openDialogWrong: true,
       openDialogCorrect: false,

@@ -1,0 +1,6 @@
+{
+  "name": "AnswerCard",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./AnswerCard.js"
+}
