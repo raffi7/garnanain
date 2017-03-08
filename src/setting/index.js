@@ -45,6 +45,14 @@ export default class Question extends React.Component {
     .catch((err) => {
       console.log(err);
     });
+    db.setItem('musics', {})
+    .catch((err) => {
+      console.log(err);
+    });
+    db.setItem('sport', {})
+    .catch((err) => {
+      console.log(err);
+    });
   }
   clearScoreDb = () => {
     db.setItem('scores', {})

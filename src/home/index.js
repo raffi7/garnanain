@@ -61,6 +61,14 @@ class AboutPage extends React.Component {
     .catch((err) => {
       console.log(err);
     });
+    db.setItem('musics', {})
+    .catch((err) => {
+      console.log(err);
+    });
+    db.setItem('sport', {})
+    .catch((err) => {
+      console.log(err);
+    });
     db.setItem('scores', {})
     .catch((err) => {
       console.log(err);

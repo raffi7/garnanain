@@ -13,11 +13,11 @@ import {
   Cell
 } from 'react-mdl';
 import db from 'localforage';
+import QButton from '../../components/QButton';
 import Layout from '../../components/Layout';
 import s from './styles.css';
 import Link from '../../components/Link';
 import history from '../history';
-import QButton from '../../components/QButton';
 
 
 class AboutPage extends React.Component {
