@@ -28,7 +28,9 @@ import {
   DialogTitle,
   DialogContent,
   DialogActions,
-  Badge
+  Badge,
+  Chip,
+  ChipContact
 } from 'react-mdl';
 import cx from 'classnames';
 import Header from './Header';
@@ -82,19 +84,42 @@ constructor() {
           // backgroundColor: '#fff'
           }} className="mdl-layout__content">
           <Card shadow={3} className={s.scoreBoard}>
-            <div style={{width: '90%', margin: 'auto'}}>
-                <IconButton colored style={{backgroundColor: '#26a69a'}}raised ripple onClick={() => this.addScore(1)} name="add" />
-                <Badge text={this.state.scores[1]}>Team1</Badge>
-                <IconButton colored style={{backgroundColor: '#26a69a',marginLeft: '10px'}} raised ripple onClick={() => this.addScore(2)} name="add" />
-                <Badge text={this.state.scores[2]}>Team2</Badge>
-                <IconButton colored style={{backgroundColor: '#26a69a',marginLeft: '10px'}} raised ripple onClick={() => this.addScore(3)} name="add" />
-                <Badge text={this.state.scores[3]}>Team3</Badge>
-                <IconButton colored style={{backgroundColor: '#26a69a',marginLeft: '10px'}} raised ripple onClick={() => this.addScore(4)} name="add" />
-                <Badge text={this.state.scores[4]}>Team4</Badge>
-                <IconButton colored style={{backgroundColor: '#26a69a',marginLeft: '10px'}} raised ripple onClick={() => this.addScore(5)} name="add" />
-                <Badge text={this.state.scores[5]}>Team5</Badge>
-                <IconButton colored style={{backgroundColor: '#26a69a',marginLeft: '10px'}} raised ripple onClick={() => this.addScore(6)} name="add" />
-                <Badge text={this.state.scores[6]}>Team6</Badge>
+            <div style={{width: '97%', margin: 'auto'}}>
+                <Chip onClick={() => this.addScore(1)} style={{backgroundColor: '#f8bbd0'}}>
+                <ChipContact className="mdl-color mdl-color-text--white" style={{backgroundColor: '#d81b60'}}>
+                  {this.state.scores[1]}</ChipContact>
+                Team1
+                </Chip>
+                <Chip onClick={() => this.addScore(2)} style={{backgroundColor: '#e1bee7',marginLeft: '10px'}}>
+                <ChipContact className="mdl-color mdl-color-text--white" style={{backgroundColor: '#8e24aa'}}>
+                  {this.state.scores[2]}</ChipContact>
+                Team2
+                </Chip>
+                <Chip onClick={() => this.addScore(3)} style={{backgroundColor: '#bbdefb',marginLeft: '10px'}}>
+                <ChipContact className="mdl-color mdl-color-text--white" style={{backgroundColor: '#0277bd'}}>
+                  {this.state.scores[3]}</ChipContact>
+                Team3
+                </Chip>
+                <Chip onClick={() => this.addScore(4)} style={{backgroundColor: '#dcedc8',marginLeft: '10px'}}>
+                <ChipContact className="mdl-color mdl-color-text--white" style={{backgroundColor: '#8bc34a'}}>
+                  {this.state.scores[4]}</ChipContact>
+                Team4
+                </Chip>
+                <Chip onClick={() => this.addScore(5)} style={{backgroundColor: '#fff9c4',marginLeft: '10px'}}>
+                <ChipContact className="mdl-color mdl-color-text--white" style={{backgroundColor: '#fbc02d'}}>
+                  {this.state.scores[5]}</ChipContact>
+                Team5
+                </Chip>
+                <Chip onClick={() => this.addScore(6)} style={{backgroundColor: '#ffe0b2',marginLeft: '10px'}}>
+                <ChipContact className="mdl-color mdl-color-text--white" style={{backgroundColor: '#fb8c00'}}>
+                  {this.state.scores[6]}</ChipContact>
+                Team6
+                </Chip>
+                <Chip onClick={() => this.addScore(7)} style={{backgroundColor: '#ffcdd2',marginLeft: '10px'}}>
+                <ChipContact className="mdl-color mdl-color-text--white" style={{backgroundColor: '#e53935'}}>
+                  {this.state.scores[7]}</ChipContact>
+                Team7
+                </Chip>
           </div>
 
           </Card>

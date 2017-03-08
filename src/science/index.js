@@ -56,7 +56,7 @@ class AboutPage extends React.Component {
         <h1 className={s.fontstyle1} style={{
           marginTop: '20px'
         }}><Grid className="demo-grid-1" style={{
-          marginTop: '20px'
+          marginTop: '30px'
         }}>
           <Cell col={1}>
             <IconButton name="arrow_back" colored onClick={this.gotoCategories}/>
@@ -66,10 +66,9 @@ class AboutPage extends React.Component {
        </h1>
         <div style={{
           width: '100%',
-          marginLeft: 'auto'
+          marginLeft: '40px'
         }}>
-          <Grid className="demo-grid-1" style={{
-          }}>
+          <Grid className="demo-grid-1">
             <Cell col={2}>
               <QButton text="1" onClick={() => this.makeSeen(1)} goto="/S1" seen={this.state.seen[1]}/>
             </Cell>

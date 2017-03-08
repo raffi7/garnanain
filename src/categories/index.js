@@ -66,7 +66,7 @@ class AboutPage extends React.Component {
           <Grid className="demo-grid-1">
             <Cell col={4}>
               <Card shadow={5} style={{
-                width: '250px',
+                width: '260px',
                 height: '120px',
                 margin: 'auto'
               }}>
@@ -84,7 +84,7 @@ class AboutPage extends React.Component {
             </Cell>
             <Cell col={4}>
               <Card shadow={5} style={{
-                width: '250px',
+                width: '260px',
                 height: '120px',
                 margin: 'auto'
               }}>
@@ -102,7 +102,7 @@ class AboutPage extends React.Component {
             </Cell>
             <Cell col={4}>
               <Card shadow={5} style={{
-                width: '250px',
+                width: '260px',
                 height: '120px',
                 margin: 'auto'
               }}>
@@ -124,7 +124,7 @@ class AboutPage extends React.Component {
           }}>
             <Cell col={6}>
               <Card shadow={5} style={{
-                width: '250px',
+                width: '260px',
                 height: '120px',
                 marginLeft: '200px'
               }}>
@@ -142,7 +142,7 @@ class AboutPage extends React.Component {
             </Cell>
             <Cell col={6}>
               <Card shadow={5} style={{
-                width: '250px',
+                width: '260px',
                 height: '120px',
                 marginLeft: '40px'
               }}>

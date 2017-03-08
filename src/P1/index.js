@@ -17,8 +17,11 @@ import {
   Dialog,
   DialogTitle,
   DialogContent,
-  DialogActions
+  DialogActions,
+  List,
+  ListItem
 } from 'react-mdl';
+import db from 'localforage';
 import Layout from '../../components/Layout';
 import ResultDialog from '../../components/ResultDialog';
 import s from '../Questionstyles.css';
@@ -26,6 +29,8 @@ import Link from '../../components/Link';
 import AnswerCard from '../../components/AnswerCard';
 import history from '../history';
 import Timer from '../../components/Timer';
+import QPicture from '../../components/QPicture';
+import p from './p.jpg';
 
 export default class Question extends React.Component {
   constructor(props) {
@@ -37,16 +42,23 @@ export default class Question extends React.Component {
   }
 
   componentDidMount() {
-    document.title = 'Գ1';
-    db.getItem('science').then((state) => {
-      this.setState(state);
-    }).catch((err) => {
-      console.log(err);
-    })
+    document.title = 'Ն1';
   }
 
-  gotoScience = () => {
-    history.push({ pathname: '/science'});
+  gotoImages = () => {
+    history.push({ pathname: '/images'});
+  }
+  correct = () => {
+    this.setState({
+      openDialogCorrect: true,
+      openDialogWrong: false,
+    });
+  }
+  wrong = () => {
+    this.setState({
+      openDialogWrong: true,
+      openDialogCorrect: false,
+    });
   }
 
 
@@ -54,25 +66,13 @@ export default class Question extends React.Component {
     return (
       <Layout className={s.content}>
         <h1 className={s.fontstyle1} style={{
-        marginTop: '20px'
-      }}><Grid className="demo-grid-1" style={{
-        marginTop: '20px'
+        marginTop: '0px'
       }}>
-        <Cell col={1}>
-          <IconButton name="arrow_back" colored onClick={this.gotoScience}/>
-        </Cell>
-        <Cell col={11} className={s.PictureQuestionFont}>Որ Երաժիշտ և երքահանն էր խլականջ</Cell>
-          </Grid>
+          <IconButton name="arrow_back" colored onClick={this.gotoImages}/>
      </h1>
-
-        <Grid className="demo-grid-1">
-          <Cell col={3}><AnswerCard text="Առաջին Պատասխան" fontSize={'15px'} onClick={this.correct} /></Cell>
-          <Cell col={3}><AnswerCard text="2st Answer" onClick={this.wrong} /></Cell>
-          <Cell col={3}><AnswerCard text="3rd Answer" onClick={this.wrong} /></Cell>
-          <Cell col={3}><AnswerCard text="4th Answer" onClick={this.wrong} /></Cell>
-        </Grid>
-        <Timer timeout={30}/>
-        <ResultDialog score="5" correct={this.state.openDialogCorrect} wrong={this.state.openDialogWrong} />
+       <QPicture p={p} crct={this.correct} wrng={this.wrong}/>
+       <div style={{marginLeft: '299px',marginTop: '15px'}}><Timer timeout={60}/></div>
+        <ResultDialog score="10" correct={this.state.openDialogCorrect} wrong={this.state.openDialogWrong} />
       </Layout>
     );
   }

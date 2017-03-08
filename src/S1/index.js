@@ -38,7 +38,6 @@ export default class Question extends React.Component {
 
   componentDidMount() {
     document.title = 'Գ1';
-    setInterval(this.addCounter, 1000);
   }
 
   correct = () => {
@@ -69,17 +68,17 @@ export default class Question extends React.Component {
         <Cell col={1}>
           <IconButton name="arrow_back" colored onClick={this.gotoScience}/>
         </Cell>
-        <Cell col={11} className={s.sciencequestionFont}>Որ Երաժիշտ և երքահանն էր խլականջ</Cell>
+        <Cell col={11} className={s.ScienceQuestionFont}>Որ Երաժիշտ և երքահանն էր խլականջ</Cell>
           </Grid>
      </h1>
 
         <Grid className="demo-grid-1">
-          <Cell col={3}><AnswerCard text="1st Answer" onClick={this.correct} /></Cell>
+          <Cell col={3}><AnswerCard text="1st Answer" fontSize={'10px'} onClick={this.correct} /></Cell>
           <Cell col={3}><AnswerCard text="2st Answer" onClick={this.wrong} /></Cell>
           <Cell col={3}><AnswerCard text="3rd Answer" onClick={this.wrong} /></Cell>
           <Cell col={3}><AnswerCard text="4th Answer" onClick={this.wrong} /></Cell>
         </Grid>
-        <Timer timeout={30}/>
+        <Timer timeout={5}/>
         <ResultDialog score="5" correct={this.state.openDialogCorrect} wrong={this.state.openDialogWrong} />
       </Layout>
     );

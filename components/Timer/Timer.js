@@ -31,6 +31,7 @@ import {
   DialogContent,
   DialogActions
 } from 'react-mdl';
+import timeout from './timeout.jpg';
 
 class Timer extends React.Component {
     static propTypes = {
@@ -82,32 +83,36 @@ class Timer extends React.Component {
   render() {
     return (
       <div>
-      <Grid className="demo-grid-2" style={{ marginTop: '5px', margineLeft: '1000px'
-      }}>
-        <Cell col={2} style={{ fontSize: '50px' }}>
-          {this.state.counter}
-        </Cell>
-        <Cell col={1}><Tooltip label="Play" position="right"><IconButton onClick={this.startCounter} name="play_arrow"
-          colored style={{color: '#388e3c'}} /></Tooltip></Cell>
-        <Cell col={1}><Tooltip label="Pause" position="right"><IconButton onClick={this.pauseTime} name="pause"/></Tooltip></Cell>
-        <Cell col={1}><Tooltip label="Replay" position="right"><IconButton onClick={this.replayTime} name="replay"
-          colored style={{color: '#dd2c00'}}/></Tooltip></Cell>
-        </Grid>
-      <Grid className="demo-grid-1">
-
-      <Cell col={9}>
-        <ProgressBar progress={this.state.counter * (100 / this.props.timeout) } />
-      </Cell>
-      </Grid>
-      <Dialog open={this.state.openDialog}>
-        <DialogTitle >Time Out !!</DialogTitle>
+      <Dialog style={{background: `url(${timeout}) center / cover`}} open={this.state.openDialog}>
+        <DialogTitle style={{color: '#b71c1c',fontSize: '45px'}} >Time Out !!</DialogTitle>
         <DialogContent>
-          <p>Ժամանակը սպառւած է:</p>
+          <p style={{color: '#e57373', fontSize: '20px'}}>Ժամանակը սպառւած է:</p>
         </DialogContent>
         <DialogActions>
           <Button type='button' onClick={this.handleCloseDialog}>Close</Button>
         </DialogActions>
       </Dialog>
+
+        <Card shadow={3} style={{minWidth: '400px', minHeight: '50px', background: '#fff'}}>
+          <Grid className="demo-grid-2" style={{ marginLeft: '2px',marginRight: '2px',marginTop: '10px'
+          }}>
+            <Cell col={4} style={{ fontSize: '60px' }}>
+              {this.state.counter}
+            </Cell>
+            <Cell col={3}><Tooltip label="Play" position="right"><IconButton onClick={this.startCounter} name="play_arrow"
+              colored style={{color: '#388e3c'}} /></Tooltip></Cell>
+            <Cell col={3}><Tooltip label="Pause" position="right"><IconButton onClick={this.pauseTime} name="pause"/></Tooltip></Cell>
+            <Cell col={2}><Tooltip label="Replay" position="right"><IconButton onClick={this.replayTime} name="replay"
+              colored style={{color: '#dd2c00'}}/></Tooltip></Cell>
+            </Grid>
+          <Grid className="demo-grid-1">
+
+          <Cell col={9}>
+            <ProgressBar styles={{margin: '100%'}}progress={this.state.counter * (100 / this.props.timeout) } />
+          </Cell>
+          </Grid>
+</Card>
+<br/>
       </div>
     )
   }

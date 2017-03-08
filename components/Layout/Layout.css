@@ -15,9 +15,9 @@
 }
 
 .scoreBoard {
-  width: 755px;
+  width: 725px;
 min-height: 50px;
-background: #E0F2F1;
+background: #00838f;
 position: absolute;
-left: 80px;
+left: 150px;
 }
