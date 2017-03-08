@@ -21,10 +21,11 @@ import {
 } from 'react-mdl';
 import Layout from '../../components/Layout';
 import ResultDialog from '../../components/ResultDialog';
-import s from './styles.css';
+import s from '../Questionstyles.css';
 import Link from '../../components/Link';
 import AnswerCard from '../../components/AnswerCard';
 import history from '../history';
+import Timer from '../../components/Timer';
 
 export default class Question extends React.Component {
   constructor(props) {
@@ -68,7 +69,7 @@ export default class Question extends React.Component {
         <Cell col={1}>
           <IconButton name="arrow_back" colored onClick={this.gotoScience}/>
         </Cell>
-        <Cell col={11} className={s.questionFont}>Որ Երաժիշտ և երքահանն էր խլականջ</Cell>
+        <Cell col={11} className={s.sciencequestionFont}>Որ Երաժիշտ և երքահանն էր խլականջ</Cell>
           </Grid>
      </h1>
 
@@ -78,6 +79,7 @@ export default class Question extends React.Component {
           <Cell col={3}><AnswerCard text="3rd Answer" onClick={this.wrong} /></Cell>
           <Cell col={3}><AnswerCard text="4th Answer" onClick={this.wrong} /></Cell>
         </Grid>
+        <Timer timeout={30}/>
         <ResultDialog score="5" correct={this.state.openDialogCorrect} wrong={this.state.openDialogWrong} />
       </Layout>
     );

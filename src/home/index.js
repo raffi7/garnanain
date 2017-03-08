@@ -57,7 +57,10 @@ class AboutPage extends React.Component {
     .catch((err) => {
       console.log(err);
     });
-
+    db.setItem('images', {})
+    .catch((err) => {
+      console.log(err);
+    });
     db.setItem('scores', {})
     .catch((err) => {
       console.log(err);
@@ -107,12 +110,12 @@ class AboutPage extends React.Component {
         <Dialog open={this.state.openDialog}>
           <DialogTitle>Are You Sure Want To Restart the Game?</DialogTitle>
           <DialogContent>
-            <p>if you prees AGREE all Question and Scores Arrangements will delete.</p>
-            <p>if you prees CLOSE to clese.</p>
+            <p>If you prees AGREE all Question and Scores Arrangements will delete.</p>
+            <p>prees CANCEL to close.</p>
           </DialogContent>
           <DialogActions>
             <Button type='button' onClick={this.agreeClearDb}>Agree</Button>
-            <Button type='button' onClick={this.CloseDialog}>Close</Button>
+            <Button type='button' onClick={this.CloseDialog}>Cancel</Button>
           </DialogActions>
         </Dialog>
       </div>

@@ -16,6 +16,8 @@ import Layout from '../../components/Layout';
 import s from './styles.css';
 import Link from '../../components/Link';
 import history from '../history';
+import mane from './mane.jpeg';
+import holo from './holo.jpg';
 
 class AboutPage extends React.Component {
   componentWillMount() {
@@ -32,7 +34,7 @@ class AboutPage extends React.Component {
     return (
       <Layout className={s.content}>
         <h1 className={s.fontstyle1} style={{
-          marginTop: '20px'
+          marginTop: '40px'
         }}><Grid className="demo-grid-1" style={{
           marginTop: '20px'
         }}>
@@ -48,11 +50,15 @@ class AboutPage extends React.Component {
           fontSize: '30px'
         }}>
         <Grid className="demo-grid-1" style={{
-          marginTop: '75px'
+          marginTop: '20px'
         }}>
           <Cell col={6}>
             <Card shadow={5} style={{width: '300px', margin: 'auto'}}>
-    <CardTitle style={{color: '#fff', height: '176px', background: 'url(http://www.getmdl.io/assets/demos/welcome_card.jpg) center / cover'}}>Welcome</CardTitle>
+    <CardTitle style={{color: '#fff', height: '176px', background: `url(${mane}) center / cover`}}></CardTitle>
+      <CardText>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Mauris sagittis pellentesque lacus eleifend lacinia...
+      </CardText>
     <CardActions border>
         <Button colored>Get Started</Button>
     </CardActions>
@@ -60,7 +66,11 @@ class AboutPage extends React.Component {
           </Cell>
           <Cell col={2}>
             <Card shadow={5} style={{width: '300px', margin: 'auto'}}>
-    <CardTitle style={{color: '#fff', height: '176px', background: 'url(http://www.getmdl.io/assets/demos/welcome_card.jpg) center / cover'}}>Welcome</CardTitle>
+    <CardTitle style={{color: '#fff', height: '176px', background: `url(${holo}) center / cover`}}></CardTitle>
+      <CardText>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Mauris sagittis pellentesque lacus eleifend lacinia...
+      </CardText>
     <CardActions border>
         <Button colored>Get Started</Button>
     </CardActions>

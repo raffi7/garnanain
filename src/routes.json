@@ -45,6 +45,10 @@
     "page": "./S1"
   },
   {
+    "path": "/P1",
+    "page": "./P1"
+  },
+  {
     "path": "/tasks/:status(pending|completed)?",
     "page": "./home"
   }

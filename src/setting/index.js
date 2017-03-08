@@ -41,6 +41,10 @@ export default class Question extends React.Component {
     .catch((err) => {
       console.log(err);
     });
+    db.setItem('images', {})
+    .catch((err) => {
+      console.log(err);
+    });
   }
   clearScoreDb = () => {
     db.setItem('scores', {})
@@ -57,7 +61,8 @@ export default class Question extends React.Component {
       <Layout className={s.content}>
         <h1 className={s.fontstyle1} style={{
           marginTop: '45px'
-        }}><Grid className="demo-grid-1" style={{
+        }}>
+        <Grid className="demo-grid-1" style={{
           marginTop: '20px'
         }}>
           <Cell col={1}>
@@ -66,7 +71,10 @@ export default class Question extends React.Component {
           <Cell col={1}>Setting</Cell>
             </Grid>
        </h1>
+       <Grid className="demo-grid-2">
+         <Cell col={6}>
        <List>
+         <ListItem><span style={{fontSize: '25px'}}>General Setting</span></ListItem>
          <ListItem>
            <span style={{marginRight: '20px'}}>
              <FABButton onClick={this.clearDb} colored style={{color: '#37474f', backgroundColor: '#eceff1'}} mini>
@@ -84,7 +92,28 @@ export default class Question extends React.Component {
             Clear Score Arrangement
           </ListItem>
       </List>
+      </Cell>
 
+      <Cell col={6}>
+        <List>
+          <ListItem><span style={{fontSize: '25px'}}>Score Manual Setting</span></ListItem>
+          <ListItem>
+            <span style={{marginRight: '20px'}}>
+              <FABButton onClick={this.clearDb} colored style={{color: '#eceff1', backgroundColor: '#f44336'}} mini>
+                -5
+              </FABButton>
+              <FABButton onClick={this.clearDb} colored
+                style={{color: '#eceff1',
+                        backgroundColor: '#388e3c',
+                        marginLeft: '5px'}} mini>
+                +5
+              </FABButton>
+           </span>
+             Team1
+           </ListItem>
+       </List>
+      </Cell>
+</Grid>
 
       </Layout>
     );

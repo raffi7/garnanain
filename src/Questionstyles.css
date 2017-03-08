@@ -1,0 +1,26 @@
+@media screen and (max-width: 1024px) {
+  .content {
+    padding: 0 16px;
+  }
+}
+
+.ScienceQuestionFont {
+  font-family: "DejaVu Serif", Georgia, Serif;
+  font-style: 'italic';
+  font-size: 50px;
+  margin-top: 60px;
+}
+
+.PictureQuestionFont {
+  font-family: "DejaVu Serif", Georgia, Serif;
+  font-style: 'italic';
+  font-size: 50px;
+  margin-top: 60px;
+}
+
+.MusicQuestionFont {
+  font-family: "DejaVu Serif", Georgia, Serif;
+  font-style: 'italic';
+  font-size: 55px;
+  margin-top: 60px;
+}

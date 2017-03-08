@@ -17,6 +17,7 @@ import s from './styles.css';
 import Link from '../../components/Link';
 import history from '../history';
 import ReactAudioPlayer from 'react-audio-player';
+import Timer from '../../components/Timer';
 
 class AboutPage extends React.Component {
 
@@ -114,6 +115,8 @@ class AboutPage extends React.Component {
   src="https://upload.wikimedia.org/wikipedia/en/4/45/ACDC_-_Back_In_Black-sample.ogg"
 />
 </Cell> </Grid>
+<Timer timeout={5}/>
+
         </div>
       </Layout>
     );
