@@ -9,7 +9,11 @@ import {
   IconButton,
   Grid,
   Cell,
-  Tooltip
+  Tooltip,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
 } from 'react-mdl';
 import db from 'localforage';
 import Layout from '../../components/Layout';
@@ -19,9 +23,29 @@ import Link from '../../components/Link';
 import history from '../history';
 
 class AboutPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+    this.OpenDialog = this.OpenDialog.bind(this);
+    this.CloseDialog = this.CloseDialog.bind(this);
+  }
 
   componentDidMount() {
     document.title = 'Home';
+  }
+  OpenDialog() {
+    this.setState({
+      openDialog: true
+    });
+  }
+  CloseDialog() {
+    this.setState({
+      openDialog: false
+    });
+  }
+  agreeClearDb = () => {
+    this.clearDb();
+    this.CloseDialog();
   }
 
   gotoCategories() {
@@ -43,7 +67,7 @@ class AboutPage extends React.Component {
   render() {
     return (
       <Layout className={s.content}>
-        <h1 className={s.fontstyle1}>Տուն</h1>
+        <h1 className={s.fontstyle1}>Home</h1>
         <div style={{
           width: '100%',
           margin: 'auto'
@@ -72,14 +96,26 @@ class AboutPage extends React.Component {
                 </CardActions>
                 <CardMenu style={{color: '#fff'}}>
                   <Tooltip label="Restart Game" position="left">
-                    <IconButton name="toys" style={{color: '#607d8b'}} onClick={this.clearDb} />
+                    <IconButton name="toys" style={{color: '#607d8b'}} onClick={this.OpenDialog} />
                   </Tooltip>
 
                 </CardMenu>
               </Card>
             </Cell>
           </Grid>
-
+          <div>
+        <Dialog open={this.state.openDialog}>
+          <DialogTitle>Are You Sure Want To Restart the Game?</DialogTitle>
+          <DialogContent>
+            <p>if you prees AGREE all Question and Scores Arrangements will delete.</p>
+            <p>if you prees CLOSE to clese.</p>
+          </DialogContent>
+          <DialogActions>
+            <Button type='button' onClick={this.agreeClearDb}>Agree</Button>
+            <Button type='button' onClick={this.CloseDialog}>Close</Button>
+          </DialogActions>
+        </Dialog>
+      </div>
         </div>
       </Layout>
     );

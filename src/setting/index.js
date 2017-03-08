@@ -48,13 +48,24 @@ export default class Question extends React.Component {
       console.log(err);
     });
   }
+  gotoHome() {
+    history.push({pathname: '/'}); // go to page function
+  }
 
   render() {
     return (
       <Layout className={s.content}>
         <h1 className={s.fontstyle1} style={{
-         marginTop: '60px'
-        }}>Setting</h1>
+          marginTop: '45px'
+        }}><Grid className="demo-grid-1" style={{
+          marginTop: '20px'
+        }}>
+          <Cell col={1}>
+            <IconButton name="home" colored onClick={this.gotoHome}/>
+          </Cell>
+          <Cell col={1}>Setting</Cell>
+            </Grid>
+       </h1>
        <List>
          <ListItem>
            <span style={{marginRight: '20px'}}>

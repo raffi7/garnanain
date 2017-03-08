@@ -34,7 +34,6 @@ class Navigation extends React.Component {
         <Link className="mdl-navigation__link" to="/">Home</Link>
         <Tooltip label="Results" position="bottom">
         <IconButton onClick={this.gotoCategories} name="timeline"/></Tooltip>
-        <Tooltip label="Categories" position="bottom">
           <div style={{position: 'relative'}}>
     <IconButton name="more_vert" id="demo-menu-lower-right" />
     <Menu target="demo-menu-lower-right" align="right" ripple>
@@ -46,7 +45,6 @@ class Navigation extends React.Component {
       <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" style={{fontSize: '18', color: '#607d8b'}} to="/setting">Setting</Link></MenuItem>
     </Menu>
         </div>
-        </Tooltip>
       </nav>
     );
   }

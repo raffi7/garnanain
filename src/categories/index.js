@@ -49,7 +49,7 @@ class AboutPage extends React.Component {
     return (
       <Layout className={s.content}>
         <h1 className={s.fontstyle1} style={{
-          marginTop: '20px'
+          marginTop: '35px'
         }}><Grid className="demo-grid-1" style={{
           marginTop: '20px'
         }}>
@@ -63,9 +63,7 @@ class AboutPage extends React.Component {
           width: '100%',
           margin: 'auto'
         }}>
-          <Grid className="demo-grid-1" style={{
-            marginTop: '20px'
-          }}>
+          <Grid className="demo-grid-1">
             <Cell col={4}>
               <Card shadow={5} style={{
                 width: '250px',
