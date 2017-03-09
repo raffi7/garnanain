@@ -15,7 +15,9 @@
 }
 
 .fontstyle1 {
-  margin-top: 50px;
+  margin-top: 45px;
+  margin-bottom: 0px;
+  margin-left: 100px;
   font-family: "FreeSerif", Georgia, Serif;
   font-size: 55px;
 }

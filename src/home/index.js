@@ -18,7 +18,7 @@ import {
 import db from 'localforage';
 import Layout from '../../components/Layout';
 import s from './styles.css';
-import homepic from './homepic.jpeg';
+import homepic from './29G.jpg';
 import Link from '../../components/Link';
 import history from '../history';
 
@@ -81,22 +81,20 @@ class AboutPage extends React.Component {
         <h1 className={s.fontstyle1}>Home</h1>
         <div style={{
           width: '100%',
-          margin: 'auto'
+          margin: 'auto',
         }}>
           <Grid className="demo-grid-1" style={{
-            marginTop: '20px'
           }}>
             <Cell col={12}>
               <Card shadow={5} style={{
-                width: '400px',
-                margin: 'auto'
+                width: '358px',
+                margin: 'auto',
               }}>
                 <CardTitle style={{
                   color: '#fff',
-                  height: '176px',
+                  height: '400px',
                   background: `url(${homepic}) center / cover`
-                }}>
-                </CardTitle>
+                }}/>
                 <CardText>
                 29-րդ Գարնանային խաղեր
                 </CardText>
@@ -107,7 +105,7 @@ class AboutPage extends React.Component {
                 </CardActions>
                 <CardMenu style={{color: '#fff'}}>
                   <Tooltip label="Restart Game" position="left">
-                    <IconButton name="toys" style={{color: '#607d8b'}} onClick={this.OpenDialog} />
+                    <IconButton name="toys" style={{color: '#4a6d4b'}} onClick={this.OpenDialog} />
                   </Tooltip>
 
                 </CardMenu>

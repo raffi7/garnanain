@@ -77,7 +77,7 @@ export default class Question extends React.Component {
       }}>
           <IconButton name="arrow_back" colored onClick={this.gotoImages}/>
      </h1>
-       <QPicture a={a} p={p} onClick={() => this.makeSeen()} seen={this.state.seen} crct={this.correct} wrng={this.wrong} />
+       <QPicture answerPic={a} questionPic={p} name="Name" lastname="LastName" onClick={() => this.makeSeen()} seen={this.state.seen} crct={this.correct} wrng={this.wrong} />
        <div style={{ marginLeft: '299px', marginTop: '15px' }}> <Timer timeout={60} /></div>
         <ResultDialog score="10" correct={this.state.openDialogCorrect} wrong={this.state.openDialogWrong} />
       </Layout>

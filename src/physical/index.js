@@ -18,6 +18,8 @@ import Link from '../../components/Link';
 import history from '../history';
 import mane from './mane.jpeg';
 import holo from './holo.jpg';
+import Timer from '../../components/Timer';
+
 
 class AboutPage extends React.Component {
   componentWillMount() {
@@ -52,32 +54,20 @@ class AboutPage extends React.Component {
         <Grid className="demo-grid-1" style={{
           marginTop: '20px'
         }}>
-          <Cell col={6}>
-            <Card shadow={5} style={{width: '300px', margin: 'auto'}}>
-    <CardTitle style={{color: '#fff', height: '176px', background: `url(${mane}) center / cover`}}></CardTitle>
-      <CardText>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Mauris sagittis pellentesque lacus eleifend lacinia...
-      </CardText>
-    <CardActions border>
-        <Button colored>Get Started</Button>
-    </CardActions>
-</Card>
+          <Cell offset={2} col={4}>
+            <Card shadow={5} style={{ width: '300px', margin: 'auto' }}>
+              <CardTitle style={{ color: '#fff', height: '200px', background: `url(${mane}) center / cover` }} />
+            </Card>
           </Cell>
-          <Cell col={2}>
-            <Card shadow={5} style={{width: '300px', margin: 'auto'}}>
-    <CardTitle style={{color: '#fff', height: '176px', background: `url(${holo}) center / cover`}}></CardTitle>
-      <CardText>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Mauris sagittis pellentesque lacus eleifend lacinia...
-      </CardText>
-    <CardActions border>
-        <Button colored>Get Started</Button>
-    </CardActions>
-</Card>
+          <Cell col={1}>
+            <Card shadow={5} style={{ width: '300px', margin: 'auto' }}>
+              <CardTitle style={{ color: '#fff', height: '200px', background: `url(${holo}) center / cover` }} />
+            </Card>
           </Cell>
           </Grid>
         </div>
+        <div style={{ marginLeft: '299px', marginTop: '15px' }}> <Timer timeout={60} /></div>
+
       </Layout>
     );
   }
