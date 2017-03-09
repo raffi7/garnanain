@@ -31,13 +31,15 @@ import history from '../history';
 import Timer from '../../components/Timer';
 import QPicture from '../../components/QPicture';
 import p from './p.jpg';
+import a from './a.jpg';
 
 export default class Question extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       openDialogCorrect: false,
-      openDialogWrong: false
+      openDialogWrong: false,
+      seen: false,
     };
   }
 
@@ -60,6 +62,11 @@ export default class Question extends React.Component {
       openDialogCorrect: false,
     });
   }
+  makeSeen = () => {
+    let seen = this.state.seen;
+    seen = true;
+    this.setState({ seen });
+  }
 
 
   render() {
@@ -70,8 +77,8 @@ export default class Question extends React.Component {
       }}>
           <IconButton name="arrow_back" colored onClick={this.gotoImages}/>
      </h1>
-       <QPicture p={p} crct={this.correct} wrng={this.wrong}/>
-       <div style={{marginLeft: '299px',marginTop: '15px'}}><Timer timeout={60}/></div>
+       <QPicture a={a} p={p} onClick={() => this.makeSeen()} seen={this.state.seen} crct={this.correct} wrng={this.wrong} />
+       <div style={{ marginLeft: '299px', marginTop: '15px' }}> <Timer timeout={60} /></div>
         <ResultDialog score="10" correct={this.state.openDialogCorrect} wrong={this.state.openDialogWrong} />
       </Layout>
     );
