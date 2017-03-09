@@ -78,10 +78,10 @@ class AboutPage extends React.Component {
   render() {
     return (
       <Layout className={s.content}>
-        <h1 className={s.fontstyle1}>Home</h1>
         <div style={{
           width: '100%',
           margin: 'auto',
+          marginTop: '110px'
         }}>
           <Grid className="demo-grid-1" style={{
           }}>

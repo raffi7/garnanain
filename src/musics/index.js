@@ -13,6 +13,7 @@ import {
   Cell
 } from 'react-mdl';
 import db from 'localforage';
+import m from '!file-loader!./m.ogg';
 import QButton from '../../components/QButton';
 import Layout from '../../components/Layout';
 import s from './styles.css';
@@ -20,6 +21,8 @@ import Link from '../../components/Link';
 import history from '../history';
 import ReactAudioPlayer from 'react-audio-player';
 import Timer from '../../components/Timer';
+import TFButton from '../../components/TFButton';
+
 
 class AboutPage extends React.Component {
 
@@ -114,11 +117,12 @@ class AboutPage extends React.Component {
             marginTop: '100px'
           }}>
             <Cell col={12}>
-          <ReactAudioPlayer
-  src="https://upload.wikimedia.org/wikipedia/en/4/45/ACDC_-_Back_In_Black-sample.ogg"
-/>
+              <ReactAudioPlayer src={m}/>
 </Cell> </Grid>
-<Timer timeout={5}/>
+<Grid className="demo-grid-1">
+  <Cell col={6}> <Timer timeout={5}/></Cell>
+    <Cell col={6}> <TFButton/></Cell>
+  </Grid>
 
         </div>
       </Layout>

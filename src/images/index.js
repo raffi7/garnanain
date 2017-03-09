@@ -20,7 +20,6 @@ import Layout from '../../components/Layout';
 import s from './styles.css';
 import Link from '../../components/Link';
 import history from '../history';
-import Timer from '../../components/Timer';
 import QButton from '../../components/QButton';
 
 class AboutPage extends React.Component {
@@ -107,7 +106,6 @@ class AboutPage extends React.Component {
           <Cell col={2}>
             <QButton text="10" onClick={() => this.makeSeen(10)} goto="/P10" seen={this.state.seen[10]}/>
           </Cell></Grid>
-        <Timer timeout={60}/>
         </div>
       </Layout>
     );
