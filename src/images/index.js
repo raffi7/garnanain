@@ -73,10 +73,10 @@ class AboutPage extends React.Component {
           marginTop: '10px'
         }}>
           <Cell col={2}>
-            <QButton text="1" onClick={() => this.makeSeen(1)} goto="/P1" seen={this.state.seen[1]}/>
+            <QButton text="1" onClick={() => this.makeSeen(1)} goto="/images/0" seen={this.state.seen[1]}/>
           </Cell>
           <Cell col={2}>
-            <QButton text="2" onClick={() => this.makeSeen(2)} goto="/P2" seen={this.state.seen[2]}/>
+            <QButton text="2" onClick={() => this.makeSeen(2)} goto="/images/1" seen={this.state.seen[2]}/>
           </Cell>
           <Cell col={2}>
             <QButton text="3" onClick={() => this.makeSeen(3)} goto="/P3" seen={this.state.seen[3]}/>

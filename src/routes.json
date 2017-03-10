@@ -49,7 +49,7 @@
     "page": "./S1"
   },
   {
-    "path": "/P1",
+    "path": "/images/:id",
     "page": "./P1"
   },
   {
