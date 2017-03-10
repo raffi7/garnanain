@@ -1,6 +1,6 @@
 const Questions = [
   {
-    text: 'Որ Երաժիշտ և երքահանն էր խլականջ',
+    text: 'Q1',
     answers: [
       {
         text: 'Answer 1',

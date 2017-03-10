@@ -22,17 +22,6 @@ export default class Question extends React.Component {
     };
   }
 
-  answer = (correct) => {
-    this.setState({
-      openDialogCorrect: correct,
-      openDialogWrong: !correct,
-    });
-  }
-
-  gotoScience = () => {
-    history.push({ pathname: '/science' });
-  }
-
   componentWillMount() {
     const id = parseInt(this.props.route.params.id, 10);
     this.question = Questions[id];
@@ -41,6 +30,15 @@ export default class Question extends React.Component {
 
   componentDidMount() {
     document.title = 'Գ1';
+  }
+  answer = (correct) => {
+    this.setState({
+      openDialogCorrect: correct,
+      openDialogWrong: !correct,
+    });
+  }
+  gotoScience = () => {
+    history.push({ pathname: '/science' });
   }
 
   render() {
@@ -55,7 +53,7 @@ export default class Question extends React.Component {
           </Grid>
         </h1>
 
-        <Grid style={{ marginLeft: '-10px' }} className="demo-grid-1">
+        <Grid style={{ marginLeft: '-10px', marginTop: '200px' }} className="demo-grid-1">
 
           {this.answers.map((answer, i) =>
             (
