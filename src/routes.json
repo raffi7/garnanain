@@ -49,6 +49,10 @@
     "page": "./S1"
   },
   {
+    "path": "/sport/:id",
+    "page": "./SP1"
+  },
+  {
     "path": "/images/:id",
     "page": "./P1"
   },
