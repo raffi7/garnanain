@@ -22,8 +22,8 @@ class Navigation extends React.Component {
   componentWillUnmount() {
     window.componentHandler.downgradeElements(this.root);
   }
-  gotoCategories() {
-    history.push({ pathname: '/categories' });
+  gotoResult() {
+    history.push({ pathname: '/result' });
   }
 
 
@@ -33,7 +33,7 @@ class Navigation extends React.Component {
         <Link className="mdl-navigation__link" to="/categories">Categories</Link>
         <Link className="mdl-navigation__link" to="/">Home</Link>
         <Tooltip label="Results" position="bottom">
-        <IconButton onClick={this.gotoCategories} name="timeline"/></Tooltip>
+        <IconButton onClick={this.gotoResult} name="timeline"/></Tooltip>
           <div style={{position: 'relative'}}>
     <IconButton name="more_vert" id="demo-menu-lower-right" />
     <Menu target="demo-menu-lower-right" align="right" ripple>
@@ -42,7 +42,7 @@ class Navigation extends React.Component {
       <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" to="/images">Images</Link></MenuItem>
       <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" to="/musics">Musics</Link></MenuItem>
       <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" to="/physical">Activities</Link></MenuItem>
-      <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" style={{fontSize: '18', color: '#607d8b'}} to="/setting">Setting</Link></MenuItem>
+      <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" style={{fontSize: '18px', color: '#607d8b'}} to="/setting">Setting</Link></MenuItem>
     </Menu>
         </div>
       </nav>

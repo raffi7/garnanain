@@ -32,7 +32,7 @@ export default class Question extends React.Component {
     super(props);
     this.state = {
       openDialogCorrect: false,
-      openDialogWrong: false
+      openDialogWrong: false,
     };
   }
 
@@ -53,11 +53,16 @@ export default class Question extends React.Component {
     });
   }
   gotoScience = () => {
-    history.push({ pathname: '/science'});
+    history.push({ pathname: '/science' });
   }
 
 
   render() {
+    let answerColor = '#0d47a1';
+    let x = 0;
+    if (x === 1) {
+      answerColor = 'green';
+    }
     return (
       <Layout className={s.content}>
         <h1 className={s.fontstyle1} style={{
@@ -72,13 +77,13 @@ export default class Question extends React.Component {
           </Grid>
      </h1>
 
-        <Grid className="demo-grid-1">
-          <Cell col={3}><AnswerCard text="1st Answer" fontSize={'10px'} onClick={this.correct} /></Cell>
-          <Cell col={3}><AnswerCard text="2st Answer" onClick={this.wrong} /></Cell>
-          <Cell col={3}><AnswerCard text="3rd Answer" onClick={this.wrong} /></Cell>
-          <Cell col={3}><AnswerCard text="4th Answer" onClick={this.wrong} /></Cell>
+        <Grid style={{marginLeft: '-10px'}} className="demo-grid-1">
+          <Cell col={3}><AnswerCard color={'#0d47a1'} text="1st Answer" fontSize={'10px'} onClick={this.correct} /></Cell>
+          <Cell col={3}><AnswerCard color={'#0d47a1'} text="2st Answer" onClick={this.wrong} /></Cell>
+          <Cell col={3}><AnswerCard color={'#0d47a1'} text="3rd Answer" onClick={this.wrong} /></Cell>
+          <Cell col={3}><AnswerCard color={'#0d47a1'} text="4th Answer" onClick={this.wrong} /></Cell>
         </Grid>
-        <Timer timeout={5}/>
+        <Timer timeout={5} />
         <ResultDialog score="5" correct={this.state.openDialogCorrect} wrong={this.state.openDialogWrong} />
       </Layout>
     );

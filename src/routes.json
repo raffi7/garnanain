@@ -17,6 +17,10 @@
     "page": "./setting"
   },
   {
+    "path": "/result",
+    "page": "./result"
+  },
+  {
     "path": "/categories",
     "page": "./categories"
   },

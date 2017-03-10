@@ -32,10 +32,12 @@ import {
   DialogActions
 } from 'react-mdl';
 import timeout from './timeout.jpg';
+import tick from './tick.mp3';
+import finish from './finish.mp3';
 
 class Timer extends React.Component {
     static propTypes = {
-    timeout: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
+    timeout: PropTypes.oneOfType([PropTypes.number, PropTypes.object]).isRequired,
   };
 
   constructor(props) {
@@ -50,7 +52,9 @@ class Timer extends React.Component {
   addCounter = () => {
     if (this.state.counter !== 0) {
         const x = this.state.counter - 1;
+        const audio = new Audio(tick);
         this.setState({ counter: x });
+        audio.play();
       } else if (!this.state.oneceOpened) {
         this.handleOpenDialog();
       }
@@ -69,6 +73,8 @@ class Timer extends React.Component {
     this.setState({oneceOpened: false})
   }
   handleOpenDialog() {
+    const audio = new Audio(finish);
+    audio.play();
     this.setState({
       openDialog: true,
       oneceOpened: true,
@@ -108,7 +114,7 @@ class Timer extends React.Component {
           <Grid className="demo-grid-1">
 
           <Cell col={9}>
-            <ProgressBar styles={{margin: '100%'}}progress={this.state.counter * (100 / this.props.timeout) } />
+            <ProgressBar progress={this.state.counter * (100 / this.props.timeout) } />
           </Cell>
           </Grid>
 </Card>

@@ -28,7 +28,8 @@ class ResultDialog extends React.Component {
     super(props);
     this.state = {
       openDialogCorrect: false,
-      openDialogWrong: false
+      openDialogWrong: false,
+      answerColor: '#0d47a1',
     };
   }
 
@@ -47,7 +48,7 @@ class ResultDialog extends React.Component {
   handleCloseDialog = () => {
     this.setState({
       openDialogCorrect: false,
-      openDialogWrong: false
+      openDialogWrong: false,
     });
   }
   componentWillReceiveProps(nextProps) {
