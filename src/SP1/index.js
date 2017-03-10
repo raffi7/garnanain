@@ -19,6 +19,7 @@ export default class Question extends React.Component {
     this.state = {
       openDialogCorrect: false,
       openDialogWrong: false,
+      reveal: false,
     };
   }
 
@@ -35,6 +36,7 @@ export default class Question extends React.Component {
     this.setState({
       openDialogCorrect: correct,
       openDialogWrong: !correct,
+      reveal: true,
     });
   }
   gotoSport = () => {
@@ -59,7 +61,7 @@ export default class Question extends React.Component {
             (
               <Cell col={3} key={i}>
                 <AnswerCard
-                  color={'#0d47a1'}
+                  color={(this.state.reveal && answer.correct) ? 'green' : '#0d47a1'}
                   text={answer.text}
                   onClick={() => this.answer(answer.correct)}
                   fontSize={answer.fontSize}
