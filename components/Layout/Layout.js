@@ -68,7 +68,7 @@ class Layout extends React.Component {
           <Header />
           <main style={{ background: `url(${mainPic}) center / cover` }} className="mdl-layout__content">
             <Card shadow={3} className={s.scoreBoard}>
-              <div style={{width: '97%', margin: 'auto'}}>
+              <div style={{width: '100%', margin: 'auto'}}>
 
                 {teams.map(team => (
                    <Chip
