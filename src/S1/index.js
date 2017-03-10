@@ -82,12 +82,12 @@ export default class Question extends React.Component {
         </h1>
 
         <Grid style={{marginLeft: '-10px'}} className="demo-grid-1">
-          <Cell col={3}><AnswerCard color={'#0d47a1'} text={question.correct} fontSize={'10px'} onClick={this.correct} /></Cell>
-          <Cell col={3}><AnswerCard color={'#0d47a1'} text={question.wrong[0]} onClick={this.wrong} /></Cell>
-          <Cell col={3}><AnswerCard color={'#0d47a1'} text={question.wrong[1]} onClick={this.wrong} /></Cell>
-          <Cell col={3}><AnswerCard color={'#0d47a1'} text={question.wrong[2]} onClick={this.wrong} /></Cell>
+          <Cell col={3}><AnswerCard color={'#0d47a1'} text={question.answers[0]} onClick={this.correct} fontSize={question.fontSize} /></Cell>
+          <Cell col={3}><AnswerCard color={'#0d47a1'} text={question.answers[1]} onClick={this.wrong} /></Cell>
+          <Cell col={3}><AnswerCard color={'#0d47a1'} text={question.answers[2]} onClick={this.wrong} /></Cell>
+          <Cell col={3}><AnswerCard color={'#0d47a1'} text={question.answers[3]} onClick={this.wrong} /></Cell>
         </Grid>
-        <Timer timeout={5} />
+        <div style={{ marginLeft: '299px', marginTop: '15px' }}> <Timer timeout={5} /></div>
         <ResultDialog score="5" correct={this.state.openDialogCorrect} wrong={this.state.openDialogWrong} />
       </Layout>
     );

@@ -10,7 +10,8 @@ import {
   Grid,
   Icon,
   FABButton,
-  Cell
+  Cell,
+  Textfield,
 } from 'react-mdl';
 import Layout from '../../components/Layout';
 import s from './styles.css';
@@ -31,6 +32,7 @@ class AboutPage extends React.Component {
   gotoCategories() {
     history.push({pathname: '/categories'}); // go to page function
   }
+
 
   render() {
     return (
@@ -66,8 +68,10 @@ class AboutPage extends React.Component {
           </Cell>
           </Grid>
         </div>
-        <div style={{ marginLeft: '299px', marginTop: '15px' }}> <Timer timeout={60} /></div>
 
+        <div style={{ marginLeft: '299px', marginTop: '15px' }}>
+          <Timer timeout={60} />
+        </div>
       </Layout>
     );
   }

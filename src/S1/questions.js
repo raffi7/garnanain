@@ -19,6 +19,18 @@ const Questions = [
       'third wrong',
     ],
   },
+  {
+    id: 2,
+    fontSize: '15px',
+    text: 'harx 3',
+    answers: [
+      'first answer',
+      'second answer',
+      'third answer',
+      'fourth answer',
+    ],
+  },
+
 ];
 
 export default Questions;

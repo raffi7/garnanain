@@ -112,18 +112,8 @@ class AboutPage extends React.Component {
           </Cell>
           <Cell col={2}>
             <QButton text="10" onClick={() => this.makeSeen(10)} goto="/M10" seen={this.state.seen[10]}/>
-          </Cell></Grid>
-          <Grid className="demo-grid-1" style={{
-            marginTop: '100px'
-          }}>
-            <Cell col={12}>
-              <ReactAudioPlayer src={m}/>
-</Cell> </Grid>
-<Grid className="demo-grid-1">
-  <Cell col={6}> <Timer timeout={5}/></Cell>
-    <Cell col={6}> <TFButton/></Cell>
-  </Grid>
-
+          </Cell>
+            </Grid>
         </div>
       </Layout>
     );
