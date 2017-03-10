@@ -38,6 +38,8 @@ import Footer from '../Footer';
 import s from './Layout.css';
 import mainPic from './main.jpg';
 import db from 'localforage';
+import adara from './adara.mp3';
+
 
 class Layout extends React.Component {
 constructor() {
@@ -54,6 +56,8 @@ constructor() {
 
   addScore = (n) => {
     let scores = this.state.scores;
+    const audio = new Audio(adara);
+    audio.play();
     scores[n] = (scores[n] || 0) + 5;
     console.log(scores);
 
