@@ -70,10 +70,10 @@ class AboutPage extends React.Component {
         }}>
           <Grid className="demo-grid-1">
             <Cell col={2}>
-              <QButton text="1" onClick={() => this.makeSeen(1)} goto="/S1" seen={this.state.seen[1]}/>
+              <QButton text="1" onClick={() => this.makeSeen(1)} goto="/science/0" seen={this.state.seen[1]}/>
             </Cell>
             <Cell col={2}>
-              <QButton text="2" onClick={() => this.makeSeen(2)} goto="/S2" seen={this.state.seen[2]}/>
+              <QButton text="2" onClick={() => this.makeSeen(2)} goto="/science/1" seen={this.state.seen[2]}/>
             </Cell>
             <Cell col={2}>
               <QButton text="3" onClick={() => this.makeSeen(3)} goto="/S3" seen={this.state.seen[3]}/>

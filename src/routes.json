@@ -45,7 +45,7 @@
     "page": "./physical"
   },
   {
-    "path": "/S1",
+    "path": "/science/:id",
     "page": "./S1"
   },
   {

@@ -26,6 +26,8 @@ import Link from '../../components/Link';
 import AnswerCard from '../../components/AnswerCard';
 import history from '../history';
 import Timer from '../../components/Timer';
+import Questions from './questions.js';
+
 
 export default class Question extends React.Component {
   constructor(props) {
@@ -46,16 +48,17 @@ export default class Question extends React.Component {
       openDialogWrong: false,
     });
   }
+
   wrong = () => {
     this.setState({
       openDialogWrong: true,
       openDialogCorrect: false,
     });
   }
+
   gotoScience = () => {
     history.push({ pathname: '/science' });
   }
-
 
   render() {
     let answerColor = '#0d47a1';
@@ -63,25 +66,26 @@ export default class Question extends React.Component {
     if (x === 1) {
       answerColor = 'green';
     }
+
+    const id = parseInt(this.props.route.params.id, 10);
+    const question = Questions[id];
+
     return (
       <Layout className={s.content}>
-        <h1 className={s.fontstyle1} style={{
-        marginTop: '20px'
-      }}><Grid className="demo-grid-1" style={{
-        marginTop: '20px'
-      }}>
-        <Cell col={1}>
-          <IconButton name="arrow_back" colored onClick={this.gotoScience}/>
-        </Cell>
-        <Cell col={11} className={s.ScienceQuestionFont}>Որ Երաժիշտ և երքահանն էր խլականջ</Cell>
+        <h1 className={s.fontstyle1} style={{marginTop: '20px'}}>
+          <Grid className="demo-grid-1" style={{marginTop: '20px'}}>
+            <Cell col={1}>
+              <IconButton name="arrow_back" colored onClick={this.gotoScience}/>
+            </Cell>
+            <Cell col={11} className={s.ScienceQuestionFont}>{question.text}</Cell>
           </Grid>
-     </h1>
+        </h1>
 
         <Grid style={{marginLeft: '-10px'}} className="demo-grid-1">
-          <Cell col={3}><AnswerCard color={'#0d47a1'} text="1st Answer" fontSize={'10px'} onClick={this.correct} /></Cell>
-          <Cell col={3}><AnswerCard color={'#0d47a1'} text="2st Answer" onClick={this.wrong} /></Cell>
-          <Cell col={3}><AnswerCard color={'#0d47a1'} text="3rd Answer" onClick={this.wrong} /></Cell>
-          <Cell col={3}><AnswerCard color={'#0d47a1'} text="4th Answer" onClick={this.wrong} /></Cell>
+          <Cell col={3}><AnswerCard color={'#0d47a1'} text={question.correct} fontSize={'10px'} onClick={this.correct} /></Cell>
+          <Cell col={3}><AnswerCard color={'#0d47a1'} text={question.wrong[0]} onClick={this.wrong} /></Cell>
+          <Cell col={3}><AnswerCard color={'#0d47a1'} text={question.wrong[1]} onClick={this.wrong} /></Cell>
+          <Cell col={3}><AnswerCard color={'#0d47a1'} text={question.wrong[2]} onClick={this.wrong} /></Cell>
         </Grid>
         <Timer timeout={5} />
         <ResultDialog score="5" correct={this.state.openDialogCorrect} wrong={this.state.openDialogWrong} />
