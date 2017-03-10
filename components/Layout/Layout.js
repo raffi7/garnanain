@@ -32,16 +32,12 @@ class Layout extends React.Component {
     this.state = { scores: [] };
   }
 
-  componentDidMount() {
-    window.componentHandler.upgradeElement(this.root);
+  componentWillMount() {
+    this.updateScores();
   }
 
-  componentWillUpdate() {
-    db.getItem('scores').then((scores) => {
-      if (scores != null) {
-        this.setState({ scores });
-      }
-    });
+  componentDidMount() {
+    window.componentHandler.upgradeElement(this.root);
   }
 
   componentWillUnmount() {
@@ -55,6 +51,14 @@ class Layout extends React.Component {
     scores[n] = (scores[n] || 0) + 5;
     this.setState({ scores });
     db.setItem('scores', this.state.scores).catch(console.log);
+  }
+
+  updateScores = () => {
+    db.getItem('scores').then((scores) => {
+      if (scores != null) {
+        this.setState({ scores });
+      }
+    });
   }
 
   render() {
