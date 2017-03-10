@@ -74,7 +74,7 @@ export default class Question extends React.Component {
           <Cell offset={2} col={1}>3</Cell>
           <Cell offset={2} col={1}>4</Cell>
         </Grid>
-        <div style={{ marginLeft: '299px', marginTop: '15px' }}> <Timer timeout={5} /></div>
+        <div style={{ marginLeft: '299px', marginTop: '15px' }}> <Timer timeout={20} /></div>
         <ResultDialog score="5" correct={this.state.openDialogCorrect} wrong={this.state.openDialogWrong} />
       </Layout>
     );
