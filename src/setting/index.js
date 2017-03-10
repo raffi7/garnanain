@@ -35,14 +35,16 @@ export default class Settings extends React.Component {
   inc = (team) => {
     db.getItem('scores').then((scores) => {
       scores[team.id] = (scores[team.id] || 0) + 5;
-      db.setItem('scores', scores);
+      db.setItem('scores', scores)
+        .then(() => this.forceUpdate());
     }).catch(console.log);
   }
 
   dec = (team) => {
     db.getItem('scores').then((scores) => {
       scores[team.id] = (scores[team.id] || 0) - 5;
-      db.setItem('scores', scores);
+      db.setItem('scores', scores)
+        .then(() => this.forceUpdate());
     }).catch(console.log);
   }
 

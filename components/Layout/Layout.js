@@ -33,6 +33,9 @@ class Layout extends React.Component {
 
   componentDidMount() {
     window.componentHandler.upgradeElement(this.root);
+  }
+
+  componentWillUpdate() {
     db.getItem('scores').then((scores) => {
       if (scores != null) {
         this.setState({ scores });
@@ -47,9 +50,7 @@ class Layout extends React.Component {
   addScore = (n) => {
     const scores = this.state.scores;
     scores[n] = (scores[n] || 0) + 5;
-
     this.setState({ scores });
-
     db.setItem('scores', this.state.scores).catch(console.log);
   }
 
@@ -64,6 +65,7 @@ class Layout extends React.Component {
 
                 {teams.map(team => (
                    <Chip
+                     key={team.id}
                      onClick={() => this.addScore(team.id)}
                      style={{ backgroundColor: team.color, marginLeft: '10px' }}
                    >
