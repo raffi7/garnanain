@@ -19,6 +19,7 @@ export default class Question extends React.Component {
     this.state = {
       openDialogCorrect: false,
       openDialogWrong: false,
+      reveal: false,
     };
   }
 
@@ -31,12 +32,15 @@ export default class Question extends React.Component {
   componentDidMount() {
     document.title = 'Գ1';
   }
+
   answer = (correct) => {
     this.setState({
       openDialogCorrect: correct,
       openDialogWrong: !correct,
+      reveal: true,
     });
   }
+
   gotoScience = () => {
     history.push({ pathname: '/science' });
   }
@@ -53,13 +57,13 @@ export default class Question extends React.Component {
           </Grid>
         </h1>
 
-        <Grid style={{ marginTop: '200px', marginLeft: '-10px'}} className="demo-grid-1">
+        <Grid style={{ marginTop: '200px', marginLeft: '-10px' }} className="demo-grid-1">
 
           {this.answers.map((answer, i) =>
             (
               <Cell col={3} key={i}>
                 <AnswerCard
-                  color={'#0d47a1'}
+                  color={(this.state.reveal && answer.correct) ? 'green' : '#0d47a1'}
                   text={answer.text}
                   onClick={() => this.answer(answer.correct)}
                   fontSize={answer.fontSize}
