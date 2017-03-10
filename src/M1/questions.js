@@ -1,4 +1,4 @@
-/* eslint-disable global-require */
+/* Music Question */
 
 const Questions = [
   {
@@ -9,7 +9,7 @@ const Questions = [
   {
     name: 'name 2',
     lastName: 'last name 2',
-    src: require('./files/m.ogg'),
+    src: require('./files/n.mp3'),
   },
 ];
 

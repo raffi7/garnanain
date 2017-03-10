@@ -1,6 +1,6 @@
 const Questions = [
   {
-    text: 'Q1',
+    text: 'SP Q1',
     answers: [
       {
         text: 'Answer 1',
@@ -18,7 +18,7 @@ const Questions = [
     ],
   },
   {
-    text: 'Q2',
+    text: 'SP Q2',
     answers: [
       {
         text: 'Answer 1',

@@ -29,7 +29,7 @@ export default class Question extends React.Component {
   }
 
   componentDidMount() {
-    document.title = 'Գ1';
+    document.title = 'Մ1';
   }
   answer = (correct) => {
     this.setState({
@@ -37,8 +37,8 @@ export default class Question extends React.Component {
       openDialogWrong: !correct,
     });
   }
-  gotoScience = () => {
-    history.push({ pathname: '/science' });
+  gotoSport = () => {
+    history.push({ pathname: '/sport' });
   }
 
   render() {
@@ -47,7 +47,7 @@ export default class Question extends React.Component {
         <h1 className={s.fontstyle1} style={{ marginTop: '20px' }}>
           <Grid className="demo-grid-1" style={{ marginTop: '20px' }}>
             <Cell col={1}>
-              <IconButton name="arrow_back" colored onClick={this.gotoScience} />
+              <IconButton name="arrow_back" colored onClick={this.gotoSport} />
             </Cell>
             <Cell col={11} className={s.ScienceQuestionFont}>{this.question.text}</Cell>
           </Grid>
