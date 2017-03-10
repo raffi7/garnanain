@@ -53,7 +53,7 @@
     "page": "./P1"
   },
   {
-    "path": "/M1",
+    "path": "/music/:id",
     "page": "./M1"
   },
   {

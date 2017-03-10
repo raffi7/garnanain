@@ -157,7 +157,7 @@ const config = {
         },
       },
       {
-        test: /\.(eot|ttf|wav|mp3)$/,
+        test: /\.(m4a|ogg|eot|ttf|wav|mp3)$/,
         loader: 'file-loader',
       },
     ],

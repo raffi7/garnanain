@@ -53,7 +53,7 @@ export default class Question extends React.Component {
           </Grid>
         </h1>
 
-        <Grid style={{ marginLeft: '-10px', marginTop: '200px' }} className="demo-grid-1">
+        <Grid style={{ marginTop: '200px', marginLeft: '-10px'}} className="demo-grid-1">
 
           {this.answers.map((answer, i) =>
             (
@@ -67,6 +67,12 @@ export default class Question extends React.Component {
               </Cell>
             ))}
 
+        </Grid>
+        <Grid style={{ fontSize: '30px'  }} className="demo-grid-1">
+          <Cell offset={1} col={1} align="center">1</Cell>
+          <Cell offset={2} col={1}>2</Cell>
+          <Cell offset={2} col={1}>3</Cell>
+          <Cell offset={2} col={1}>4</Cell>
         </Grid>
         <div style={{ marginLeft: '299px', marginTop: '15px' }}> <Timer timeout={5} /></div>
         <ResultDialog score="5" correct={this.state.openDialogCorrect} wrong={this.state.openDialogWrong} />
