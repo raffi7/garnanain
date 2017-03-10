@@ -19,85 +19,41 @@ import {
   DialogContent,
   DialogActions,
   List,
-  ListItem
+  ListItem,
+  Chip,
+  ChipContact
 } from 'react-mdl';
+import Chart from 'react-highcharts';
 import db from 'localforage';
 import Layout from '../../components/Layout';
-import Chart from 'react-highcharts';
 import ResultDialog from '../../components/ResultDialog';
 import s from './styles.css';
 import Link from '../../components/Link';
 import AnswerCard from '../../components/AnswerCard';
 import history from '../history';
+import teams from '../teams';
 
 export default class Question extends React.Component {
   constructor(props) {
     super(props);
-    this.config = {
-      chart: {
-        type: 'column'
-    },
-    title: {
-        text: 'Ardioonkner'
-    },
-    xAxis: {
-        categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
-        title: {
-            text: null
-        }
-    },
-    yAxis: {
-        min: 0,
-        title: {
-            text: 'Population (millions)',
-            align: 'high'
-        },
-        labels: {
-            overflow: 'justify'
-        }
-    },
-    tooltip: {
-        valueSuffix: ' millions'
-    },
-    plotOptions: {
-        bar: {
-            dataLabels: {
-                enabled: true
-            }
-        }
-    },
-    legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'top',
-        x: -40,
-        y: 80,
-        floating: true,
-        borderWidth: 1,
-        shadow: true
-    },
-    credits: {
-        enabled: false
-    },
-    series: [{
-        name: 'Year 1800',
-        data: [107]
-    }, {
-        name: 'Year 1900',
-        data: [133]
-    }, {
-        name: 'Year 2012',
-        data: [1052]
-    }]
-    };
+    this.state = { scores: [] };
   }
-
+  componentWillMount() {
+    this.updateScores();
+  }
   componentDidMount() {
     document.title = 'Setting';
     setInterval(this.addCounter, 1000);
   }
   gotoHome() {
-    history.push({pathname: '/'}); // go to page function
+    history.push({ pathname: '/' });
+  }
+  updateScores = () => {
+    db.getItem('scores').then((scores) => {
+      if (scores != null) {
+        this.setState({ scores });
+      }
+    });
   }
 
   render() {
@@ -115,10 +71,20 @@ export default class Question extends React.Component {
           <Cell col={1}>Results</Cell>
             </Grid>
        </h1>
-
-       <Chart config={this.config}></Chart>
-
-
+       <Grid style={{ marginTop: '20px',marginLeft: '10px'}}>
+     {teams.map(team => (
+       <Cell col={1} style={{marginLeft: '50px'}} >
+       <Card shadow={0} style={{width: '110px', minHeight: '150px', backgroundColor: team.backColor, margin: 'auto'}}>
+         <CardTitle expand style={{fontSize: '67px',color: 'white'}}>{this.state.scores[team.id]}</CardTitle>
+         <CardActions style={{height: '52px', padding: '16px', background: 'rgba(0,0,0,0.2)'}}>
+           <span style={{color: '#fff', fontSize: '26px', fontWeight: '500'}}>
+        {team.name}
+    </span>
+         </CardActions>
+       </Card>
+       </Cell>
+        ))}
+        </Grid>
       </Layout>
     );
   }

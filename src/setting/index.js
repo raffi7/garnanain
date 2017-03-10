@@ -56,7 +56,7 @@ export default class Settings extends React.Component {
     return (
       <Layout className={s.content}>
         <h1 className={s.fontstyle1} style={{ marginTop: '45px' }}>
-          <Grid className="demo-grid-1" style={{ marginTop: '10px' }}>
+          <Grid className="demo-grid-2" style={{ marginTop: '10px' }}>
             <Cell col={1}>
               <IconButton name="home" colored onClick={this.gotoHome} />
             </Cell>
