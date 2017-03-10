@@ -75,8 +75,8 @@ export default class Question extends React.Component {
      {teams.map(team => (
        <Cell col={1} style={{marginLeft: '50px'}} >
        <Card shadow={0} style={{width: '110px', minHeight: '150px', backgroundColor: team.backColor, margin: 'auto'}}>
-         <CardTitle expand style={{fontSize: '67px',color: 'white'}}>{this.state.scores[team.id]}</CardTitle>
-         <CardActions style={{height: '52px', padding: '16px', background: 'rgba(0,0,0,0.2)'}}>
+         <CardTitle expand style={{fontSize: '60px',color: 'white',padding: '5px',margin: 'auto'}}>{this.state.scores[team.id]}</CardTitle>
+         <CardActions style={{height: '52px', padding: '10px', background: 'rgba(0,0,0,0.2)'}}>
            <span style={{color: '#fff', fontSize: '26px', fontWeight: '500'}}>
         {team.name}
     </span>
