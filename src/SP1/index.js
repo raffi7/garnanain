@@ -72,10 +72,18 @@ export default class Question extends React.Component {
 
         </Grid>
         <Grid style={{ fontSize: '30px', marginTop: '-50px'  }} className="demo-grid-1">
-          <Cell offset={1} col={1} align="center"><Icon style={{ color: '#283593', fontSize: '50px', marginLeft: '90px' }} name="looks_one" /></Cell>
-          <Cell offset={2} col={1} ><Icon style={{ color: '#283593', fontSize: '50px', marginLeft: '90px' }} name="looks_two" /></Cell>
-          <Cell offset={2} col={1}><Icon style={{ color: '#283593', fontSize: '50px', marginLeft: '90px' }} name="looks_3" /></Cell>
-          <Cell offset={2} col={1}><Icon style={{ color: '#283593', fontSize: '50px', marginLeft: '90px' }} name="looks_4" /></Cell>
+          <Cell offset={1} col={1} align="center" style={{ zIndex: '1' }}>
+            <Icon style={{ color: '#283593', fontSize: '50px', marginLeft: '90px' }} name="looks_one" />
+          </Cell>
+          <Cell offset={2} col={1} style={{ zIndex: '1' }}>
+            <Icon style={{ color: '#283593', fontSize: '50px', marginLeft: '90px' }} name="looks_two" />
+          </Cell>
+          <Cell offset={2} col={1} style={{ zIndex: '1' }}>
+            <Icon style={{ color: '#283593', fontSize: '50px', marginLeft: '90px' }} name="looks_3" />
+          </Cell>
+          <Cell offset={2} col={1} style={{ zIndex: '1' }}>
+            <Icon style={{ color: '#283593', fontSize: '50px', marginLeft: '90px' }} name="looks_4" />
+          </Cell>
         </Grid>
         <div style={{ marginLeft: '299px', marginTop: '15px' }}> <Timer timeout={20} /></div>
         <ResultDialog score="5" correct={this.state.openDialogCorrect} wrong={this.state.openDialogWrong} />
