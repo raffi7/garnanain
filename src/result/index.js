@@ -42,7 +42,7 @@ export default class Question extends React.Component {
     this.updateScores();
   }
   componentDidMount() {
-    document.title = 'Setting';
+    document.title = 'Results';
     setInterval(this.addCounter, 1000);
   }
   gotoHome() {
@@ -68,23 +68,34 @@ export default class Question extends React.Component {
           <Cell col={1}>
             <IconButton name="home" colored onClick={this.gotoHome}/>
           </Cell>
-          <Cell col={1}>Results</Cell>
+          <Cell col={1}>Արդիւնքներ</Cell>
             </Grid>
        </h1>
-       <Grid style={{ marginTop: '20px',marginLeft: '10px'}}>
-     {teams.map(team => (
-       <Cell col={1} style={{marginLeft: '50px'}} >
-       <Card shadow={0} style={{width: '110px', minHeight: '150px', backgroundColor: team.backColor, margin: 'auto'}}>
-         <CardTitle expand style={{fontSize: '60px',color: 'white',padding: '5px',margin: 'auto'}}>{this.state.scores[team.id]}</CardTitle>
-         <CardActions style={{height: '52px', padding: '10px', background: 'rgba(0,0,0,0.2)'}}>
-           <span style={{color: '#fff', fontSize: '26px', fontWeight: '500'}}>
-        {team.name}
-    </span>
-         </CardActions>
-       </Card>
-       </Cell>
-        ))}
-        </Grid>
+
+       {teams.map(team => (
+         <Grid className="demo-grid-1">
+           <Cell col={1} style={{marginTop: '-5px'}}>
+             <Card shadow={0} style={{
+               width: '100px',
+               minHeight: '40px',
+               backgroundColor: team.color,
+               marginLeft: '20px'
+               }}>
+               <CardTitle expand style={{font: 'bold',fontSize: '30px', color: '#212121' ,padding: '5px',margin: 'auto'}}>{team.name}</CardTitle>
+             </Card>
+           </Cell>
+           <Cell col={1} style={{marginTop: '-5px',marginLeft: '40px'}}>
+             <Card shadow={0} style={{
+               width: this.state.scores[team.id]*7.5,
+               minHeight: '40px',
+               backgroundColor: team.backColor,
+               marginLeft: '20px'
+               }}>
+               <CardTitle expand style={{fontSize: '30px',color: 'white',padding: '5px',margin: 'auto',marginLeft: '5px'}}>{this.state.scores[team.id]}</CardTitle>
+             </Card>
+           </Cell>
+         </Grid>
+          ))}
       </Layout>
     );
   }

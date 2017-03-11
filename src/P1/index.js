@@ -21,7 +21,7 @@ export default class Question extends React.Component {
   }
 
   componentDidMount() {
-    document.title = 'Ն1';
+    document.title = 'Ն';
   }
 
   gotoImages = () => {

@@ -30,7 +30,7 @@ export default class Question extends React.Component {
   }
 
   componentDidMount() {
-    document.title = 'Մ1';
+    document.title = this.question.id;
   }
   answer = (correct) => {
     this.setState({
@@ -61,7 +61,7 @@ export default class Question extends React.Component {
             (
               <Cell col={3} key={i}>
                 <AnswerCard
-                  color={(this.state.reveal && answer.correct) ? 'green' : '#0d47a1'}
+                  color={(this.state.reveal && answer.correct) ? '#2E7D32' : '#0d47a1'}
                   text={answer.text}
                   onClick={() => this.answer(answer.correct)}
                   fontSize={answer.fontSize}

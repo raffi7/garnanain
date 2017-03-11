@@ -20,7 +20,7 @@ export default class Question extends React.Component {
   }
 
   componentDidMount() {
-    document.title = 'Ե1';
+    document.title = 'Ե';
   }
 
   gotoMusic = () => {

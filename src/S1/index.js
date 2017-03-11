@@ -3,6 +3,7 @@ import {
   IconButton,
   Grid,
   Cell,
+  Icon,
 } from 'react-mdl';
 import { shuffle } from 'underscore';
 import Layout from '../../components/Layout';
@@ -30,7 +31,7 @@ export default class Question extends React.Component {
   }
 
   componentDidMount() {
-    document.title = 'Գ1';
+    document.title = this.question.id;
   }
 
   answer = (correct) => {
@@ -63,7 +64,7 @@ export default class Question extends React.Component {
             (
               <Cell col={3} key={i}>
                 <AnswerCard
-                  color={(this.state.reveal && answer.correct) ? 'green' : '#0d47a1'}
+                  color={(this.state.reveal && answer.correct) ? '#2E7D32' : '#0d47a1'}
                   text={answer.text}
                   onClick={() => this.answer(answer.correct)}
                   fontSize={answer.fontSize}
@@ -73,10 +74,10 @@ export default class Question extends React.Component {
 
         </Grid>
         <Grid style={{ fontSize: '30px'  }} className="demo-grid-1">
-          <Cell offset={1} col={1} align="center">1</Cell>
-          <Cell offset={2} col={1}>2</Cell>
-          <Cell offset={2} col={1}>3</Cell>
-          <Cell offset={2} col={1}>4</Cell>
+          <Cell offset={1} col={1} align="center"><Icon style={{ color: '#283593', fontSize: '50px' }} name="looks_one" /></Cell>
+          <Cell offset={2} col={1} ><Icon style={{ color: '#283593', fontSize: '50px' }} name="looks_two" /></Cell>
+          <Cell offset={2} col={1}><Icon style={{ color: '#283593', fontSize: '50px' }} name="looks_3" /></Cell>
+          <Cell offset={2} col={1}><Icon style={{ color: '#283593', fontSize: '50px' }} name="looks_4" /></Cell>
         </Grid>
         <div style={{ marginLeft: '299px', marginTop: '15px' }}> <Timer timeout={20} /></div>
         <ResultDialog score="5" correct={this.state.openDialogCorrect} wrong={this.state.openDialogWrong} />
