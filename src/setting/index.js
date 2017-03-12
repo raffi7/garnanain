@@ -13,6 +13,8 @@ import Layout from '../../components/Layout';
 import s from './styles.css';
 import history from '../history';
 import teams from '../teams';
+import adara from './adara.mp3';
+
 
 export default class Settings extends React.Component {
 
@@ -22,6 +24,8 @@ export default class Settings extends React.Component {
   }
 
   clearDb = () => {
+    const audio = new Audio(adara);
+    audio.play();
     db.setItem('science', {}).catch(console.log);
     db.setItem('images', {}).catch(console.log);
     db.setItem('musics', {}).catch(console.log);
@@ -29,10 +33,14 @@ export default class Settings extends React.Component {
   }
 
   clearScoreDb = () => {
+    const audio = new Audio(adara);
+    audio.play();
     db.setItem('scores', {}).catch(console.log);
   }
 
   inc = (team) => {
+    const audio = new Audio(adara);
+    audio.play();
     db.getItem('scores').then((scores) => {
       scores[team.id] = (scores[team.id] || 0) + 5;
       db.setItem('scores', scores)
@@ -41,6 +49,8 @@ export default class Settings extends React.Component {
   }
 
   dec = (team) => {
+    const audio = new Audio(adara);
+    audio.play();
     db.getItem('scores').then((scores) => {
       scores[team.id] = (scores[team.id] || 0) - 5;
       db.setItem('scores', scores)

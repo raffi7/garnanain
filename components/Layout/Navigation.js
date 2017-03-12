@@ -25,15 +25,28 @@ class Navigation extends React.Component {
   gotoResult() {
     history.push({ pathname: '/result' });
   }
+  gotoSetting() {
+    history.push({ pathname: '/setting' });
+  }
+  gotoHome() {
+    history.push({ pathname: '/' });
+  }
+  gotoCategories() {
+    history.push({ pathname: '/categories' });
+  }
 
 
   render() {
     return (
       <nav className="mdl-navigation" ref={node => (this.root = node)}>
-        <Link className="mdl-navigation__link" to="/categories">Categories</Link>
-        <Link className="mdl-navigation__link" to="/">Home</Link>
+          <Tooltip label="Home" position="bottom">
+          <IconButton onClick={this.gotoHome} name="home"/></Tooltip>
+            <Tooltip label="Categories" position="bottom">
+            <IconButton onClick={this.gotoCategories} name="apps"/></Tooltip>
         <Tooltip label="Results" position="bottom">
-        <IconButton onClick={this.gotoResult} name="timeline"/></Tooltip>
+        <IconButton onClick={this.gotoResult} name="insert_chart"/></Tooltip>
+          <Tooltip label="Settings" position="bottom">
+          <IconButton onClick={this.gotoSetting} name="settings"/></Tooltip>
           <div style={{position: 'relative'}}>
     <IconButton name="more_vert" id="demo-menu-lower-right" />
     <Menu target="demo-menu-lower-right" align="right" ripple>
@@ -42,7 +55,6 @@ class Navigation extends React.Component {
       <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" to="/images">Images</Link></MenuItem>
       <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" to="/musics">Musics</Link></MenuItem>
       <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" to="/physical">Activities</Link></MenuItem>
-      <MenuItem><Link style={{color: '#000'}}className="mdl-navigation__link" style={{fontSize: '18px', color: '#607d8b'}} to="/setting">Setting</Link></MenuItem>
     </Menu>
         </div>
       </nav>
