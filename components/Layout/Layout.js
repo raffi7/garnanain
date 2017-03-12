@@ -21,6 +21,7 @@ import s from './Layout.css';
 import mainPic from './main.jpg';
 import teams from '../../src/teams';
 import adara from './adara.mp3';
+import logo from './logo.png';
 
 class Layout extends React.Component {
   static propTypes = {

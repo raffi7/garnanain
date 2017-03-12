@@ -16,6 +16,8 @@ export default class Question extends React.Component {
     this.state = {
       openDialogCorrect: false,
       openDialogWrong: false,
+      pauseTimer: false,
+
     };
   }
 
@@ -44,7 +46,10 @@ export default class Question extends React.Component {
   makeSeen = () => {
     let seen = this.state.seen;
     seen = true;
-    this.setState({ seen });
+    this.setState({ seen,
+      pauseTimer: true,
+    });
+
   }
 
   render() {
@@ -66,7 +71,7 @@ export default class Question extends React.Component {
           wrng={this.wrong}
         />
         <div style={{ marginLeft: '299px', marginTop: '15px' }}>
-          <Timer timeout={10} />
+          <Timer timeout={10} pause={this.state.pauseTimer} />
         </div>
         <ResultDialog score="" correct={this.state.openDialogCorrect} wrong={this.state.openDialogWrong} />
       </Layout>

@@ -7,6 +7,7 @@ import {
   Icon,
   FABButton,
   Cell,
+  Card,
 } from 'react-mdl';
 import db from 'localforage';
 import Layout from '../../components/Layout';
@@ -74,19 +75,20 @@ export default class Settings extends React.Component {
           </Grid>
         </h1>
         <Grid className="demo-grid-2" style={{ marginTop: '-45px' }}>
-          <Cell col={6}>
+          <Cell style={{margin: '-5px'}} col={6}>
             <List>
               <ListItem><span style={{ fontSize: '25px' }}>Score Manual Setting</span></ListItem>
               {teams.map(team => (
-                 <ListItem key={team.id}>
+                <Card shadow={2} style={{ width: '250px', minHeight: '50px', margin: '-12px', marginLeft: '-5px', marginTop: '15px'}}>
+                 <ListItem key={team.id} style={{ marginTop: '-8px' }}>
                    <span style={{ marginRight: '20px' }}>
                      <FABButton onClick={() => this.dec(team)} colored style={{ color: '#eceff1', backgroundColor: '#f44336' }} mini>
                        -5 </FABButton>
                      <FABButton onClick={() => this.inc(team)} colored mini style={{ color: '#eceff1', backgroundColor: '#388e3c', marginLeft: '5px' }} >
                        +5 </FABButton>
                    </span>
-                   {team.name}
-                 </ListItem>
+                   <span style={{ color: team.backColor, fontSize: '25px'}}>{team.name}</span>
+                 </ListItem></Card>
                ))}
             </List>
           </Cell>
