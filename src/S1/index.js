@@ -21,6 +21,7 @@ export default class Question extends React.Component {
       openDialogCorrect: false,
       openDialogWrong: false,
       reveal: false,
+      pauseTimer: false,
     };
   }
 
@@ -39,6 +40,7 @@ export default class Question extends React.Component {
       openDialogCorrect: correct,
       openDialogWrong: !correct,
       reveal: true,
+      pauseTimer: true,
     });
   }
 
@@ -86,7 +88,7 @@ export default class Question extends React.Component {
             ))}
 
         </Grid>
-        <div style={{ marginLeft: '299px', marginTop: '15px' }}> <Timer timeout={20} /></div>
+        <div style={{ marginLeft: '299px', marginTop: '15px' }}> <Timer timeout={20} pause={this.state.pauseTimer} /></div>
         <ResultDialog score="5" correct={this.state.openDialogCorrect} wrong={this.state.openDialogWrong} />
       </Layout>
     );
