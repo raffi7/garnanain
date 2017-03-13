@@ -60,7 +60,7 @@ export default class Question extends React.Component {
           </Grid>
         </h1>
         <Grid style={{ fontSize: '30px', marginTop: '200px', marginBottom: '-47px' }} className="demo-grid-1">
-          <Cell offset={1} col={1} align="center" style={{ zIndex: '2' }}>
+          <Cell offset={1} col={1} style={{ zIndex: '2' }}>
             <Icon style={{ color: '#E91E63', fontSize: '60px', marginLeft: '90px' }} name="looks_one" />
           </Cell>
           <Cell offset={2} col={1} style={{ zIndex: '2' }}>
