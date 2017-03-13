@@ -86,7 +86,7 @@ export default class Question extends React.Component {
            </Cell>
            <Cell col={1} style={{marginTop: '-5px',marginLeft: '40px'}}>
              <Card shadow={2} style={{
-               width: this.state.scores[team.id]*7.5,
+               width: (this.state.scores[team.id] || 0)*7.5,
                minHeight: '40px',
                backgroundColor: team.backColor,
                marginLeft: '20px'
