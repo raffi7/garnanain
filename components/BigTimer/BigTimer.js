@@ -34,7 +34,6 @@ class Timer extends React.Component {
 
   componentDidMount = () => {
     this.setState({ counter: this.props.timeout });
-    this.startCounter();
   }
 
   componentWillUnmount() {

@@ -32,6 +32,9 @@ class AboutPage extends React.Component {
   gotoCategories() {
     history.push({pathname: '/categories'}); // go to page function
   }
+  gotoPhys() {
+    history.push({pathname: '/phys'}); // go to page function
+  }
 
 
   render() {
@@ -57,21 +60,18 @@ class AboutPage extends React.Component {
           marginTop: '20px'
         }}>
           <Cell offset={2} col={4}>
-            <Card shadow={5} style={{ width: '300px', margin: 'auto' }}>
+            <Card onClick={this.gotoPhys} shadow={5} style={{ width: '300px', margin: 'auto' }}>
               <CardTitle style={{ color: '#fff', height: '200px', background: `url(${mane}) center / cover` }} />
             </Card>
           </Cell>
           <Cell col={1}>
-            <Card shadow={5} style={{ width: '300px', margin: 'auto' }}>
+            <Card onClick={this.gotoPhys} shadow={5} style={{ width: '300px', margin: 'auto' }}>
               <CardTitle style={{ color: '#fff', height: '200px', background: `url(${holo}) center / cover` }} />
             </Card>
           </Cell>
           </Grid>
         </div>
 
-        <div style={{ marginLeft: '299px', marginTop: '15px' }}>
-          <Timer timeout={15} />
-        </div>
       </Layout>
     );
   }

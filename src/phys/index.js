@@ -29,8 +29,8 @@ class AboutPage extends React.Component {
   componentDidMount() {
     document.title = 'Ֆիզիքական';
   }
-  gotoCategories() {
-    history.push({pathname: '/categories'}); // go to page function
+  gotoPhysical = () => {
+    history.push({ pathname: '/physical' });
   }
 
 
@@ -43,13 +43,13 @@ class AboutPage extends React.Component {
           marginTop: '20px'
         }}>
           <Cell col={1}>
-            <IconButton name="arrow_back" colored onClick={this.gotoCategories}/>
+            <IconButton name="arrow_back" colored onClick={this.gotoPhysical}/>
           </Cell>
             </Grid>
        </h1>
 
         <div style={{ marginLeft: '299px', marginTop: '15px' }}>
-          <BigTimer timeout={5}/>
+          <BigTimer timeout={15}/>
         </div>
       </Layout>
     );
