@@ -1,13 +1,3 @@
-/**
- * React Static Boilerplate
- * https://github.com/kriasoft/react-static-boilerplate
- *
- * Copyright © 2015-present Kriasoft, LLC. All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
- */
-
 import React, { PropTypes } from 'react';
 import {
   IconButton,
@@ -99,13 +89,21 @@ class Timer extends React.Component {
   render() {
     return (
       <div>
-        <Dialog style={{ background: `url(${timeout}) center / cover` }} open={this.state.openDialog}>
-          <DialogTitle style={{ color: '#b71c1c', fontSize: '45px' }} >Time Out !!</DialogTitle>
+        <Dialog style={{
+          backgroundColor: '#fff',
+          height: '250px',
+          minWidth: '300px',
+          marginTop: '20px'}} open={this.state.openDialog}>
+          <DialogTitle style={{ color: '#D50000', fontSize: '52px' }} >Time Out !!</DialogTitle>
           <DialogContent>
-            <p style={{ color: '#e57373', fontSize: '20px' }}>Ժամանակը սպառւած է:</p>
+            <p style={{
+              marginTop: '50px',
+              marginLeft: '50px',
+              color: '#D50000',
+              fontSize: '100px' }}>0.0</p>
           </DialogContent>
           <DialogActions>
-            <Button type="button" onClick={this.handleCloseDialog}>Close</Button>
+            <Button style={{marginTop: '10px'}} type="button" onClick={this.handleCloseDialog}>Close</Button>
           </DialogActions>
         </Dialog>
 
