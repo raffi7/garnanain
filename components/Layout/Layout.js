@@ -88,7 +88,7 @@ class Layout extends React.Component {
 
               </div>
             </Card>
-            <img src={logo} alt="Smiley face" height="42" width="42" /> 
+            <img className={s.logo} src={logo} alt="Smiley face" height="42" width="42" />
             <div {...this.props} className={cx(s.content, this.props.className)} />
           </main>
         </div>

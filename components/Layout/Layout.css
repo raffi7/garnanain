@@ -21,3 +21,11 @@ background: #00838f;
 position: absolute;
 left: 150px;
 }
+
+.logo {
+  position: absolute;
+height: 100px;
+width: 121px;
+right: 23px;
+bottom: 10px;
+}

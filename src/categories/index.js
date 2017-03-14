@@ -154,7 +154,7 @@ class AboutPage extends React.Component {
                 <CardActions border>
                   <Button colored style={{
                     fontSize: 20
-                  }} onClick={this.gotoPhysical}>Ֆիզիկական</Button>
+                  }} onClick={this.gotoPhysical}>Ֆիզիքական</Button>
                 </CardActions>
               </Card>
             </Cell>

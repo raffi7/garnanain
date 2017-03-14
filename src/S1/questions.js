@@ -1,532 +1,539 @@
 const Questions = [
   {
     id: 'Գ1',
-    text: 'Question',
+    text: 'ի՞նչ նիւթ են պարունակում  Թռչունի փետուրները:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'կրեատին',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Կալցիոմ',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Սննդաթելիկներ (Ֆիբր)',
         correct: false,
+        fontSize: '25px',
       }, {
-        text: 'Answer 4',
+        text: 'Դոնդող (Ժելատին)',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ2',
-    text: 'Question',
+    text: 'Ի՞ նչ անունով է յայտնի  Շւեցարիան:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Ժամացոյցի երկիր',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Հազար կղզի',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'դրախտի երկիր',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Արծաթի երկիր',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ3',
-    text: 'Question',
+    text: 'Ո՞ր երկրից է ծագել երաժշտութիւնը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Չինաստան',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Հայաստան',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Անգլիա',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Ամերիկա',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ4',
-    text: 'Question',
+    text: 'Ո՞ւմ գրչին է պատկանում ՝ Երեք հրացանակիրներ վէպը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Ալեքսանդր Դիւմաի',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Քուբի Բրայանթի',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Վիկտոր Հոգոի',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Ալեքսանդր Մակեդոնացու',
         correct: false,
+        fontSize: '28px',
       },
     ],
   },
   {
     id: 'Գ5',
-    text: 'Question',
+    text: 'Աշխարահռչակ Ո՞ր  երաժիշտ եւ երգահան   էր խլականջ:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Բեթհովեն',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Բախ',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Կոմիտաս',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Եաննի',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ6',
-    text: 'Question',
+    text: 'Ի՞նչ  անւանակոչում ունի   Արգենտինա երկիրը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Արծաթի երկիր',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Ոսկու հանք',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Սոված երկիր',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Կապոյտ երկիր',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ7',
-    text: 'Question',
+    text: 'Ո՞վ է յայտնաբերել  Ռադիոմ քիմիական տարը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Մարի Կիւրի',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Մրայա Քերի',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Կատրին Կոլման',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Մարիա  Թելկես',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ8',
-    text: 'Question',
+    text: 'Ո՞րն է  Ասիայի ամենաթանկ քաղաքնը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Տոկիօն',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Չելսին',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Մոսկւան',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Սիդնէյը',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ9',
-    text: 'Question',
+    text: 'Ո՞րն է  աշխարհի ամենաերկար գետը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Նեղոս (Նիլ)',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Ամազոն',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Եփրատ',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Միսիսիպի',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ10',
-    text: 'Question',
+    text: 'Ի՞նչէ կոչւում   Բելառուսի դրամական միաւորը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Ռուբլի',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Եւրօ',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Լիրա',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Դրախմա',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ11',
-    text: 'Question',
+    text: 'Ո՞ր երկրում չըկայ պետական կինոթատրոն:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Սաուդիան Արաբիա',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Մակեդոնիա',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Ամերիկա',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Վրաստան',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ12',
-    text: 'Question',
+    text: 'Ո՞րն է խաղաղութեան խորհրդանիշ ծառը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Ձիթենի',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Սոճի',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Ուռենի',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Բոնսայ',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ13',
-    text: 'Question',
+    text: 'Մարդու աչքի ոսպնեակը  քանի մեգափիկսել է:',
     answers: [
       {
-        text: 'Answer 1',
+        text: '576',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: '1024',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: '124',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: '1,000,000',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ14',
-    text: 'Question',
+    text: 'Ո՞ւմ գրչին է պատկանում  «Սպանւած աղաւնի» վէպը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Նարդոսի',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Գէորգ Էմինի',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Աւետիս Ահարոնեանի',
         correct: false,
+        fontSize: '30px',
       }, {
-        text: 'Answer 4',
+        text: 'Չարենցի',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ15',
-    text: 'Question',
+    text: 'Ո՞րն  է   ծովային ամենախելացի կենդանին:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Դելֆինը',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Կետը (նահանգ)',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Շնաձուկ (Քուսէ)',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Ութոտնուկ',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ16',
-    text: 'Question',
+    text: 'Ո՞ր երկրի  դրոշն է ,որ ուղղանկիւն չէ:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Նեպալի',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Կրովասիի',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Անգլիաի',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Սերբիայի',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ17',
-    text: 'Question',
+    text: 'Ո՞ր երկրում է գտնւում աշխարհի ամենահին եկեղեցին:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Իրանում',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Հայաստանում',
+        correct: false,
+        fontSize: '28px',
+      }, {
+        text: 'Իտալիայում',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Ֆրանսիայում',
         correct: false,
-      }, {
-        text: 'Answer 4',
-        correct: false,
+        fontSize: '28px',
       },
     ],
   },
   {
     id: 'Գ18',
-    text: 'Question',
+    text: 'Ի՞նչէ խորհրդանշում «Թաջ մահալ»դամբարան :',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Սէր',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Ազատութիւն',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Ուժ',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Միասնութիւն',
         correct: false,
+        fontSize: '30px',
       },
     ],
   },
   {
     id: 'Գ19',
-    text: 'Question',
+    text: 'Մէկ մայլը, քանի՞ կիլոմետր է:',
     answers: [
       {
-        text: 'Answer 1',
+        text: '1.906',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: '1.960',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: '1.609',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: '1.690',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ20',
-    text: 'Question',
+    text: 'Ո՞ր երկիրն է ,որ շրջանառութեան մէջ  է դրել  առաջին  թղթադրամը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Չինաստանը',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Իրանը',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Անգլիան',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Բենգլադեշը',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ21',
-    text: 'Question',
+    text: 'Ո՞ր երկրների միջեւ  է եղել՝ 100 տարի տեւող պատերազմը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Ֆրանսիա- անգլիա',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Ֆրանսիա- Գերմանիա',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Ռուսաստան- Շւեդիա',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Իտալիա- Հունգարիա',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ22',
-    text: 'Question',
+    text: 'Ո՞րն է ամենաշատ վիտամին C  պարունակող միրգը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Կիվին',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Նարինջը',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Խնձորը',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Կիտրոնը',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ23',
-    text: 'Question',
+    text: 'Ո՞վ է Լեռնայի Ղարաբաղի հանրապետութեան  նախագահը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Բակօ Սահակեա',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Վարդան Արամեան',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Լեւոն Մկրտչեան',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Սպարտակ Թորոսեան',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ24',
-    text: 'Question',
+    text: 'Հայկական բանակի կազմաւորման  օրն է',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Յունւարի 28',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Փետրւարի  18',
+        correct: false,
+        fontSize: '29px',
+      }, {
+        text: 'Փտրւարի 28',
         correct: false,
       }, {
-        text: 'Answer 3',
-        correct: false,
-      }, {
-        text: 'Answer 4',
+        text: 'Ունւարի 18',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ25',
-    text: 'Question',
+    text: 'Դոնալդ Թրամփը, ԱՄՆ-ի  Քանիերրորդ նախագահն է:',
     answers: [
       {
-        text: 'Answer 1',
+        text: '45',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: '52',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: '41',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: '43',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ26',
-    text: 'Question',
+    text: 'Շուշիի ազատագրման օրն է',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Մայիսի 9',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Մարտի 2',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Մայիսի 5',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Մարտի 1',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ27',
-    text: 'Question',
+    text: 'Ո՞ր երկրում է  ստեղծւել  շախմատ խաղատեսակը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Հնդկաստան',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Իրան',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Ռուսաստան',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Ամերիկա',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ28',
-    text: 'Question',
+    text: 'Ո՞ր ծրագիրը Microsoft հիմնարկութեանը չէ։',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Libre Office',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Skype',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Visual Studio',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Cortana',
         correct: false,
       },
     ],
@@ -536,16 +543,16 @@ const Questions = [
     text: 'Question',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'aaaa',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'bbbb',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'cccc',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'dddd',
         correct: false,
       },
     ],
@@ -555,22 +562,20 @@ const Questions = [
     text: 'Question',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'aaaa',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'bbbb',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'cccc',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'dddd',
         correct: false,
       },
     ],
   },
-
-
 
 ];
 

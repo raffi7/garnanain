@@ -70,9 +70,6 @@ export default class Question extends React.Component {
           crct={this.correct}
           wrng={this.wrong}
         />
-        <div style={{ marginLeft: '299px', marginTop: '15px' }}>
-          <Timer timeout={10} pause={this.state.pauseTimer} />
-        </div>
         <ResultDialog score="" correct={this.state.openDialogCorrect} wrong={this.state.openDialogWrong} />
       </Layout>
     );

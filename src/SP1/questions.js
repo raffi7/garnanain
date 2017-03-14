@@ -1,570 +1,572 @@
 const Questions = [
   {
     id: 'Մ1',
-    text: 'SP Question',
+    text: 'Ռիօ – 2016 Օլիմպիական խաղերում Հայաստանը  քանի՞  մեդալ  շահեց:',
     answers: [
       {
-        text: 'Answer 1',
+        text: '4',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: '5',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: '3',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: '2',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ2',
-    text: 'SP Question',
+    text: 'Օլիմպիական խաղերում,ո՞վ է եղել Իրանի առաջին եւ միակ  կին մեդալակիրը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Քիմիա Ալիզադեհ',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Զահրա Նեմաթի',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Լիդա Ֆարիման',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Մելիքա Միր-Հոսէյնի',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ3',
-    text: 'SP Question',
+    text: 'Օլիմպիական խաղերում  քանի՞ մեդալ է շահել Ամերիկացի լեգենդար  լողորդ՝  Մայքլ  Ֆելփսը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: '23',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: '18',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: '8',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: '14',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ4',
-    text: 'SP Question',
+    text: 'Նշւած  մարզիկներից  ո՞րն է  ամենատարեց Ֆուտբոլիստը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Քրիստիանօ Ռոնալդօ',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Լուիզ  Սուարեզ',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Վէյն Ռունի',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Սեսկ  Ֆաբրեգաս',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ5',
-    text: 'SP Question',
+    text: 'Աթենք-2004 Օլիմպիական խաղերում , ո՞ր երկիրն  է   նւաճել տղամարդկանց բասկետբոլի   ախոյան կոչումը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Արգենտինա',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Իսպանիա',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Ամերիկա',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Սերբիա',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ6',
-    text: 'SP Question',
+    text: 'Նշւած  Ֆուտբոլի հաւաքականներից  ո՞րն էամենաշատ մասնակցութիւնը բերել   Եւրոպայի գաւաթին:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Գերմանիա',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Իտալիա',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Ֆրանսիա',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Անգլիա',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ7',
-    text: 'SP Question',
+    text: 'Ամենաթանկ  թրանֆերանսը (TRANFERANS)ո՞ր Ֆուտբոլիստի    դէպքում  է կատարւել:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Փոգրա',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Գարեթ Բէյլ ',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Նէյմար',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Ռոնալդօ',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ8',
-    text: 'SP Question',
+    text: 'Ո՞ր հաւաքականին է տրւած «Լոնդոնի   հրաձիկներ»  տիտղոսը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Արսենալ',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Չելսի',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Էվերտոն',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Տոտենհամ',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ9',
-    text: 'SP Question',
+    text: 'Ո՞վ է համարւում 2017-ի թիւ մէկ  թենիսիստը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Էնդի Մարէյ',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Ջոկովիչ',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Նադալ',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Ֆեդերեր',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ10',
-    text: 'SP Question',
+    text: 'Իրանցի ո՞ր մրցավարին է վստահւել   Ռիօ 2016-ի  Ֆուտբոլի եզրափակիչ խաղի մրցավարութիւնը:',
+    fontsize: '45px',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Ֆաղանի',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Մոհսեն Թորքի',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Մոհսեն ղահրամանի',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Սայիդ Բախշիզադեհ',
         correct: false,
+        fontSize: '30px',
       },
     ],
   },
   {
     id: 'Մ11',
-    text: 'SP Question',
+    text: 'Ի՞նչէ կոչւում  թեհրանի ամենահին  մարզաւանը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Ամջադիէ',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Ազադի',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Շիրուդի',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Արարատ',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ12',
-    text: 'SP Question',
+    text: 'Մարատոնեան վազքուղին քանի՞ կիլոմետր է :',
     answers: [
       {
-        text: 'Answer 1',
+        text: '42',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: '10',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: '5',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: '30',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ13',
-    text: 'SP Question',
+    text: 'N.B.A.-ում , ո՞ր  հաւաքականն է  նւաճել ամենաշատ   ախոյան կոչումը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Բոստոն Սելտիկս',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Լոսանջելես  Լէյքերս',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Չիկագօ Բոլս',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Մայամի Հիթ',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ14',
-    text: 'SP Question',
+    text: 'Ո՞ր թւականին է հիմնադրւել N.B.A.-ը',
     answers: [
       {
-        text: 'Answer 1',
+        text: '1946',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: '1935',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: '1960',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: '1886',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ15',
-    text: 'SP Question',
+    text: 'Սեղանի թենիսի քաշը քանի՞ գրամ է:',
     answers: [
       {
-        text: 'Answer 1',
+        text: '2.72',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: '1',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: '2.50',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: '4',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ16',
-    text: 'SP Question',
+    text: 'Ո՞ր երկրի քաղաքացի է արագավազ Ուսէյն (Հոսէյն) Բոլտը',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Ջամայիկա',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Ամերիկա',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Աֆրիկա',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Փորտորիկօ',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ17',
-    text: 'SP Question',
+    text: 'Վոլէյբոլ  մարզաճիւղի  մրցավարները քանի՞ են :',
     answers: [
       {
-        text: 'Answer 1',
+        text: '10',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: '2',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: '5',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: '4',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ18',
-    text: 'SP Question',
+    text: 'Քան՞ մարզիկից է բաղկացած Վոլէյբոլ  մարզաձեւի իւրաքանչիւր թիմը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: '12',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: '22',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: '8',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: '14',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ19',
-    text: 'SP Question',
+    text: 'Ո՞վ շահեց  Ռիօ-2016-ի կանանց 100- մետր վազքի ոսկեայ մեդալը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Էլէյն թամսոն',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Սերենա Վիլիամզ',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Աննա շարափովա',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Աննա կուրնիկովա',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ20',
-    text: 'SP Question',
+    text: 'Քան՞ի  սանտիմետր  է , Սեղանի թենիսի  սեղանի երկարութիւնը :',
     answers: [
       {
-        text: 'Answer 1',
+        text: '274',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: '300',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: '175',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: '250',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ21',
-    text: 'SP Question',
+    text: 'Ի՞նչ է կոչւում աշխարհի լողի Ֆեդերացիան:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'FINA',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'FILA',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'FISA',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'IHF',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ22',
-    text: 'SP Question',
+    text: 'Ի՞նչէ կոչւում միջազգային օլիմպիական կոմիտէն:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'I.O.C',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'I.A.A.F.',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'I.J.F.',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'I.S.F.',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ23',
-    text: 'SP Question',
+    text: 'Տարւայ ո՞ր ամսում է կայանում՝ Տուր  դը Ֆրանս հեծանւային մրցաշարը: տարւայ :',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Յուլիս',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Յունիս',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Մարտ',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Ապրիլ',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ24',
-    text: 'SP Question',
+    text: '2014-ի  Ֆուտբոլի աշխարհի գաւաթի մրցութիւններում,ո՞ր թիմը Գերմանիայի հաւաքականից  պարտութիւն կրեց :',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Բրազիլիա',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Անգլիա',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Ֆրանսիա',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Իտալիա',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ25',
-    text: 'SP Question',
+    text: 'Եւրոպայի Ֆուտբոլի գաւաթի մրցութիւններում  ,ո՞ր  երկիրն է երկակի (երկու անգամ)  ախոյան   հանդիսացել:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Իսպանիա',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Իտալիա',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Գերմանիա',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Ֆրանսիա',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ26',
-    text: 'SP Question',
+    text: 'Ո՞ր երկրում կամ  երկրներում  է կայացել՝ 2002   թւականին  Ֆուտբոլի աշխարհի գաւաթը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Կորեա եւ ճապոնեա',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Գերմանիա',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Աւստրիա եւ  Շւեցարիա',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Յունաստան',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ27',
-    text: 'SP Question',
+    text: 'Ո՞ր լողաձեւով է սկսւում՝ անհատական խառը լողի մրցոյթը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Բատերֆլայ',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'գորտնալող',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Կլոր լող',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Թիկնալող',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ28',
-    text: 'SP Question',
+    text: 'Ո՞վ է եղել  2015 թւականի բասկետբոլի աստղերի խաղի 3-նիշանոց նետումի յաղթողը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: 'Կելլի տամսոն',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: 'Ստեֆեն Քարի',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: 'Զաք Դավսոն',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: 'Ջէյմզ Հարդեն',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ29',
-    text: 'SP Question',
+    text: 'Քանի՞ մետր է հեռացատկ  մարզաձեւի  վազքուղու  երկարութիւնը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: '40',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: '65',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: '15',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: '80',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ30',
-    text: 'SP Question',
+    text: 'Քանի՞ րոպէանոց  խաղամասերից  է բաղկացած հանդբոլ մարզաձեւը:',
     answers: [
       {
-        text: 'Answer 1',
+        text: '2x30',
         correct: true,
       }, {
-        text: 'Answer 2',
+        text: '2x40',
         correct: false,
       }, {
-        text: 'Answer 3',
+        text: '2x20',
         correct: false,
       }, {
-        text: 'Answer 4',
+        text: '2x15',
         correct: false,
       },
     ],
