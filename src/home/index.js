@@ -21,6 +21,7 @@ import s from './styles.css';
 import homepic from './29G.jpg';
 import Link from '../../components/Link';
 import history from '../history';
+import backSong from './backSong.mp3';
 
 class AboutPage extends React.Component {
   constructor(props) {
@@ -74,6 +75,10 @@ class AboutPage extends React.Component {
       console.log(err);
     });
   }
+  playSong = () => {
+    const audio = new Audio(backSong);
+    audio.play();
+  }
 
   render() {
     return (
@@ -83,6 +88,9 @@ class AboutPage extends React.Component {
           margin: 'auto',
           marginTop: '110px'
         }}>
+          <div className={s.musicControl}>
+          <IconButton name="play_arrow" onClick={this.playSong} style={{ color: '#00838f' }} colored />
+          </div>
           <Grid className="demo-grid-1" style={{
           }}>
             <Cell col={12}>

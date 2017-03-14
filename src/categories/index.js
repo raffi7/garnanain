@@ -73,7 +73,7 @@ class AboutPage extends React.Component {
                 <CardTitle style={{
                   color: '#000',
                   height: '176px',
-                  background: `url(${sciPic}) center / cover`
+                  background: `url(${sciPic}) center / cover`,
                 }}></CardTitle>
                 <CardActions border>
                   <Button colored style={{

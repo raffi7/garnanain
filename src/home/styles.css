@@ -21,3 +21,8 @@
   font-family: "FreeSerif", Georgia, Serif;
   font-size: 55px;
 }
+.musicControl {
+  position: absolute;
+  left: 55px;
+  top: 15px;
+}

@@ -521,7 +521,7 @@ const Questions = [
   },
   {
     id: 'Գ28',
-    text: 'Ո՞ր ծրագիրը Microsoft հիմնարկութեանը չէ։',
+    text: 'Ո՞ր ծրագիրը Microsoft հիմնարկութեանը չի պատկանում։',
     answers: [
       {
         text: 'Libre Office',
@@ -540,38 +540,38 @@ const Questions = [
   },
   {
     id: 'Գ29',
-    text: 'Question',
+    text: 'Ո՞րն է Կանադաի մայրաքաղաքը։',
     answers: [
       {
-        text: 'aaaa',
+        text: 'Օտտավա',
         correct: true,
       }, {
-        text: 'bbbb',
+        text: 'Տորոնտո',
         correct: false,
       }, {
-        text: 'cccc',
+        text: 'Մոնրեալ',
         correct: false,
       }, {
-        text: 'dddd',
+        text: 'Վանկուվեր',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ30',
-    text: 'Question',
+    text: 'Ի՞նչ է նշանակում WWW։',
     answers: [
       {
-        text: 'aaaa',
+        text: 'World Wide Web',
         correct: true,
       }, {
-        text: 'bbbb',
+        text: 'Wide & Wet Web',
         correct: false,
       }, {
-        text: 'cccc',
+        text: 'Wild Weird Web',
         correct: false,
       }, {
-        text: 'dddd',
+        text: 'World Working Web',
         correct: false,
       },
     ],

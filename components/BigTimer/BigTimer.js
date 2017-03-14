@@ -27,7 +27,7 @@ class Timer extends React.Component {
     super(props);
     this.state = { counter: 60,
     bColor: '#fff',
-  tColor: '#263238' };
+    tColor: '#263238' };
     this.handleOpenDialog = this.handleOpenDialog.bind(this);
     this.handleCloseDialog = this.handleCloseDialog.bind(this);
   }
@@ -67,7 +67,9 @@ class Timer extends React.Component {
 
   replayTime = () => {
     this.state.counter = this.props.timeout;
-    this.setState({ onceOpened: false });
+    this.setState({ onceOpened: false,
+      bColor: '#fff',
+      tColor: '#263238'});
   }
 
   handleOpenDialog() {

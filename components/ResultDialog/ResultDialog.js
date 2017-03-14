@@ -21,6 +21,7 @@ import {
   DialogContent,
   DialogActions
 } from 'react-mdl';
+import f from './f.ogg';
 
 class ResultDialog extends React.Component {
 
