@@ -37,7 +37,7 @@ class Timer extends React.Component {
     super(props);
     this.state = { counter: 60,
     bColor: '#fff',
-  tColor: '#000' };
+  tColor: '#263238' };
     this.handleOpenDialog = this.handleOpenDialog.bind(this);
     this.handleCloseDialog = this.handleCloseDialog.bind(this);
   }
@@ -54,7 +54,7 @@ class Timer extends React.Component {
   addCounter = () => {
     if (this.props.pause) {
       this.pauseTime();
-    } else if (this.state.counter !== 0) {
+    } else if (this.state.counter > 0.1) {
       const x = this.state.counter - 0.1;
       if (this.state.counter < 10.0) {
         this.setState({ bColor: '#F44336',
