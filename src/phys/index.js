@@ -20,7 +20,7 @@ import history from '../history';
 import mane from './mane.jpeg';
 import holo from './holo.jpg';
 import Timer from '../../components/Timer';
-
+import BigTimer from '../../components/BigTimer';
 
 class AboutPage extends React.Component {
   componentWillMount() {
@@ -45,32 +45,11 @@ class AboutPage extends React.Component {
           <Cell col={1}>
             <IconButton name="arrow_back" colored onClick={this.gotoCategories}/>
           </Cell>
-          <Cell col={1}>Ֆիզիքական</Cell>
             </Grid>
        </h1>
-        <div style={{
-          width: '100%',
-          marginLeft: 'auto',
-          fontSize: '30px'
-        }}>
-        <Grid className="demo-grid-1" style={{
-          marginTop: '20px'
-        }}>
-          <Cell offset={2} col={4}>
-            <Card shadow={5} style={{ width: '300px', margin: 'auto' }}>
-              <CardTitle style={{ color: '#fff', height: '200px', background: `url(${mane}) center / cover` }} />
-            </Card>
-          </Cell>
-          <Cell col={1}>
-            <Card shadow={5} style={{ width: '300px', margin: 'auto' }}>
-              <CardTitle style={{ color: '#fff', height: '200px', background: `url(${holo}) center / cover` }} />
-            </Card>
-          </Cell>
-          </Grid>
-        </div>
 
         <div style={{ marginLeft: '299px', marginTop: '15px' }}>
-          <Timer timeout={15} />
+          <BigTimer timeout={5}/>
         </div>
       </Layout>
     );
