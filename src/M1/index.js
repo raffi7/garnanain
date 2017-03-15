@@ -6,7 +6,6 @@ import Layout from '../../components/Layout';
 import ResultDialog from '../../components/ResultDialog';
 import s from '../Questionstyles.css';
 import history from '../history';
-import Timer from '../../components/Timer';
 import QMusic from '../../components/QMusic';
 import Questions from './questions';
 
@@ -63,6 +62,8 @@ export default class Question extends React.Component {
         </h1>
         <QMusic
           src={question.src}
+          answerSong={question.answerSong}
+          answerPic={question.songCover}
           name={question.name}
           lastname={question.lastName}
           onClick={() => this.makeSeen()}

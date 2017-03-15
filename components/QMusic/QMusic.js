@@ -35,14 +35,18 @@ class QMusic extends React.Component {
 
 
   render() {
+    let background = `url(${music}) center / cover`;
+    let song = this.props.src;
     let answer = "";
     if (this.props.seen) {
+      background = `url(${this.props.answerPic}) center / cover`;
+      song = this.props.answerSong;
       answer = <div><span>{this.props.name}</span><span style={{marginLeft: '15px'}}>{this.props.lastname}</span></div>;
     }
     return (
     <Card shadow={0} style={{ margin: 'auto', minWidth: '600px'}}>
-    <CardTitle style={{color: '#fff',minHeight: '370px', background: `url(${music}) center / cover` }}>
-      <div style={{marginLeft: '125px', marginTop: '300px'}}><ReactAudioPlayer src={this.props.src}/></div>
+    <CardTitle style={{color: '#fff',minHeight: '370px', background: background }}>
+      <div style={{marginLeft: '125px', marginTop: '300px'}}><ReactAudioPlayer src={song}/></div>
     </CardTitle>
     <CardActions border>
       <div style={{width: '100%', margin: 'auto'}}>
