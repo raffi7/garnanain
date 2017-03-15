@@ -41,6 +41,18 @@ const Teams = [
     color: '#ffcdd2',
     backColor: '#e53935',
   },
+  // {
+  //   id: 8,
+  //   name: 'teamH',
+  //   color: '#B2EBF2',
+  //   backColor: '#00ACC1',
+  // },
+  // {
+  //   id: 9,
+  //   name: 'teamI',
+  //   color: '#D7CCC8',
+  //   backColor: '#6D4C41',
+  // },
 ];
 
 export default Teams;
