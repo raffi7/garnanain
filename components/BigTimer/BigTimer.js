@@ -15,6 +15,7 @@ import {
 } from 'react-mdl';
 import timeout from './timeout.jpg';
 import tick from './tick.mp3';
+import ticklow from './ticklow.mp3';
 import finish from './finish.mp3';
 
 class Timer extends React.Component {
@@ -45,10 +46,14 @@ class Timer extends React.Component {
       this.pauseTime();
     } else if (this.state.counter > 0.1) {
       const x = this.state.counter - 0.1;
-      if (this.state.counter < 10.0) {
+      if (this.state.counter < 10.1) {
         this.setState({ bColor: '#F44336',
         tColor: '#fff' });
-      } if (this.state.counter < 10.1 ) {
+        const audio = new Audio(ticklow);
+        audio.play();
+      }
+        console.log(Math.floor(this.state.counter * 10) / 10 );
+      if (Math.floor(this.state.counter) === Math.floor(this.state.counter*10)/10) {
         const audio = new Audio(tick);
         audio.play();
       }

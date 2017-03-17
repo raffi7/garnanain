@@ -49,7 +49,7 @@ class AboutPage extends React.Component {
        </h1>
 
         <div style={{ marginLeft: '299px', marginTop: '15px' }}>
-          <BigTimer timeout={15}/>
+          <BigTimer timeout={60}/>
         </div>
       </Layout>
     );
