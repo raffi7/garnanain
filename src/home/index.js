@@ -24,57 +24,15 @@ import history from '../history';
 import backSong from './backSong.mp3';
 
 class AboutPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-    this.OpenDialog = this.OpenDialog.bind(this);
-    this.CloseDialog = this.CloseDialog.bind(this);
-  }
 
   componentDidMount() {
     document.title = 'Home';
-  }
-  OpenDialog() {
-    this.setState({
-      openDialog: true
-    });
-  }
-  CloseDialog() {
-    this.setState({
-      openDialog: false
-    });
-  }
-  agreeClearDb = () => {
-    this.clearDb();
-    this.CloseDialog();
   }
 
   gotoCategories() {
     history.push({ pathname: '/categories' });
   }
 
-  clearDb = () => {
-    db.setItem('science', {})
-    .catch((err) => {
-      console.log(err);
-    });
-    db.setItem('images', {})
-    .catch((err) => {
-      console.log(err);
-    });
-    db.setItem('musics', {})
-    .catch((err) => {
-      console.log(err);
-    });
-    db.setItem('sport', {})
-    .catch((err) => {
-      console.log(err);
-    });
-    db.setItem('scores', {})
-    .catch((err) => {
-      console.log(err);
-    });
-  }
   playSong = () => {
     const audio = new Audio(backSong);
     audio.play();
@@ -89,7 +47,7 @@ class AboutPage extends React.Component {
           marginTop: '110px'
         }}>
           <div className={s.musicControl}>
-          <IconButton name="play_arrow" onClick={this.playSong} style={{ color: '#00838f' }} colored />
+          <IconButton name="play_circle_outline" onClick={this.playSong} style={{ color: '#00838f' }} colored />
           </div>
           <Grid className="demo-grid-1" style={{
           }}>
@@ -107,32 +65,17 @@ class AboutPage extends React.Component {
                 29-րդ Գարնանային խաղեր
                 </CardText>
                 <CardActions border>
-                  <Button colored style={{
-                    fontSize: 20
-                  }} onClick={this.gotoCategories}>start</Button>
+                  <Button
+                    colored style={{
+                      fontSize: 20
+                    }} onClick={this.gotoCategories}
+                  >
+                  start
+                </Button>
                 </CardActions>
-                <CardMenu style={{color: '#fff'}}>
-                  <Tooltip label="Restart Game" position="left">
-                    <IconButton name="toys" style={{color: '#4a6d4b'}} onClick={this.OpenDialog} />
-                  </Tooltip>
-
-                </CardMenu>
               </Card>
             </Cell>
           </Grid>
-          <div>
-        <Dialog open={this.state.openDialog}>
-          <DialogTitle>Are You Sure Want To Restart the Game?</DialogTitle>
-          <DialogContent>
-            <p>If you prees AGREE all Question and Scores Arrangements will delete.</p>
-            <p>prees CANCEL to close.</p>
-          </DialogContent>
-          <DialogActions>
-            <Button type='button' onClick={this.agreeClearDb}>Agree</Button>
-            <Button type='button' onClick={this.CloseDialog}>Cancel</Button>
-          </DialogActions>
-        </Dialog>
-      </div>
         </div>
       </Layout>
     );

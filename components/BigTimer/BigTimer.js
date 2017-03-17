@@ -48,10 +48,11 @@ class Timer extends React.Component {
       if (this.state.counter < 10.0) {
         this.setState({ bColor: '#F44336',
         tColor: '#fff' });
+      } if (this.state.counter < 10.1 ) {
+        const audio = new Audio(tick);
+        audio.play();
       }
-      const audio = new Audio(tick);
       this.setState({ counter: x });
-      audio.play();
     } else if (!this.state.onceOpened) {
       this.handleOpenDialog();
     }

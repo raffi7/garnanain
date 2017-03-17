@@ -8,6 +8,11 @@ import {
   FABButton,
   Cell,
   Card,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  Button,
 } from 'react-mdl';
 import db from 'localforage';
 import Layout from '../../components/Layout';
@@ -15,13 +20,35 @@ import s from './styles.css';
 import history from '../history';
 import teams from '../teams';
 import adara from './adara.mp3';
+import pollux from './pollux.mp3';
 
 
 export default class Settings extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {};
+    this.OpenDialog = this.OpenDialog.bind(this);
+    this.CloseDialog = this.CloseDialog.bind(this);
+  }
+
   componentDidMount() {
     document.title = 'Setting';
     setInterval(this.addCounter, 1000);
+  }
+  OpenDialog() {
+    this.setState({
+      openDialog: true
+    });
+  }
+  CloseDialog() {
+    this.setState({
+      openDialog: false
+    });
+  }
+  agreeClearDb = () => {
+    this.clearDb();
+    this.CloseDialog();
   }
 
   clearDb = () => {
@@ -31,6 +58,16 @@ export default class Settings extends React.Component {
     db.setItem('images', {}).catch(console.log);
     db.setItem('musics', {}).catch(console.log);
     db.setItem('sport', {}).catch(console.log);
+  }
+  clearAllDb = () => {
+    const audio = new Audio(pollux);
+    audio.play();
+    db.setItem('science', {}).catch(console.log);
+    db.setItem('images', {}).catch(console.log);
+    db.setItem('musics', {}).catch(console.log);
+    db.setItem('sport', {}).catch(console.log);
+    db.setItem('scores', {}).catch(console.log);
+    this.OpenDialog();
   }
 
   clearScoreDb = () => {
@@ -60,7 +97,7 @@ export default class Settings extends React.Component {
   }
 
   gotoHome() {
-    history.push({pathname: '/'}); // go to page function
+    history.push({pathname: '/'});
   }
 
   render() {
@@ -111,9 +148,30 @@ export default class Settings extends React.Component {
                 </span>
                 Clear Score Arrangement
               </ListItem>
+              <ListItem>
+                <span style={{ marginRight: '20px' }}>
+                  <FABButton onClick={this.clearAllDb} colored style={{ color: '#E53935', backgroundColor: '#eceff1' }} mini>
+                    <Icon name="restore" />
+                  </FABButton>
+                </span>
+                Restart the Game
+              </ListItem>
             </List>
           </Cell>
         </Grid>
+        <div>
+      <Dialog open={this.state.openDialog}>
+        <DialogTitle>Are You Sure Want To Restart the Game?</DialogTitle>
+        <DialogContent>
+          <p>If you prees AGREE all Question and Scores Arrangements will delete.</p>
+          <p>prees CANCEL to close.</p>
+        </DialogContent>
+        <DialogActions>
+          <Button type="button" onClick={this.agreeClearDb}>Agree</Button>
+          <Button type="button" onClick={this.CloseDialog}>Cancel</Button>
+        </DialogActions>
+      </Dialog>
+    </div>
       </Layout>
     );
   }

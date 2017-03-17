@@ -1,14 +1,19 @@
-/**
- * React Static Boilerplate
- * https://github.com/kriasoft/react-static-boilerplate
- *
- * Copyright © 2015-present Kriasoft, LLC. All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
- */
-
 import React from 'react';
+import {
+  IconButton,
+  List,
+  ListItem,
+  Grid,
+  Icon,
+  FABButton,
+  Cell,
+  Card,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogTitle,
+  Button,
+} from 'react-mdl';
 import history from '../history';
 import Link from '../../components/Link';
 import s from './styles.css';
@@ -29,6 +34,10 @@ class ErrorPage extends React.Component {
     history.goBack();
   };
 
+  goHome() {
+    history.push({pathname: '/'}); // go to page function
+  }
+
   render() {
     if (this.props.error) console.error(this.props.error); // eslint-disable-line no-console
 
@@ -39,16 +48,15 @@ class ErrorPage extends React.Component {
     return (
       <div className={s.container}>
         <main className={s.content}>
-          <h1 className={s.code}>{code}</h1>
-          <p className={s.title}>{title}</p>
-          {code === '404' &&
-            <p className={s.text}>
-              The page you&apos;re looking for does not exist or an another error occurred.
-            </p>
-          }
+          <h1 className={s.code}>
+            <p><Icon style={{ fontSize: '300px', color: '#E57373'}} name="error_outline" /></p>
+            <p style={{ fontSize: '100px', color: '#E57373'}}>ERROR</p>
+            <p style={{ fontSize: '30px', color: '#B0BEC5', marginTop: '37px'}}>something went wrong</p>
+          </h1>
+          <br /><br />
           <p className={s.text}>
-            <a href="/" onClick={this.goBack}>Go back</a>, or head over to the&nbsp;
-            <Link to="/">home page</Link> to choose a new direction.
+              <IconButton onClick={this.goHome} ripple style={{ fontSize: '45px', color: '#546E7A'}} name="arrow_back" />
+              <IconButton onClick={this.goHome} ripple style={{ fontSize: '45px', color: '#546E7A'}} name="home" />
           </p>
         </main>
       </div>
