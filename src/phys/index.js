@@ -27,7 +27,7 @@ class AboutPage extends React.Component {
     document.body.style.backgroundColor = '#AA0000';
   }
   componentDidMount() {
-    document.title = 'Ֆիզիքական';
+    document.title = 'ՖԻԶԻԿԱԿԱՆ';
   }
   gotoPhysical = () => {
     history.push({ pathname: '/physical' });

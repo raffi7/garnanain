@@ -44,14 +44,20 @@ const Teams = [
   // {
   //   id: 8,
   //   name: 'teamH',
-  //   color: '#B2EBF2',
-  //   backColor: '#00ACC1',
+  //   color: '#F0F4C3',
+  //   backColor: '#C0CA33',
   // },
   // {
   //   id: 9,
   //   name: 'teamI',
-  //   color: '#D7CCC8',
-  //   backColor: '#6D4C41',
+  //   color: '#C5CAE9',
+  //   backColor: '#3949AB',
+  // },
+  // {
+  //   id: 10,
+  //   name: 'teamJ',
+  //   color: '#CFD8DC',
+  //   backColor: '#455A64',
   // },
 ];
 

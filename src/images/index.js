@@ -106,6 +106,13 @@ class AboutPage extends React.Component {
           <Cell col={2}>
             <QButton text="10" onClick={() => this.makeSeen(10)} goto="/images/9" seen={this.state.seen[10]}/>
           </Cell></Grid>
+          <Grid className="demo-grid-1" style={{
+            marginTop: '25px'
+          }}>
+          <Cell offset={4} col={2}>
+            <QButton text="11" onClick={() => this.makeSeen(11)} goto="/images/10" seen={this.state.seen[11]}/>
+          </Cell>
+              </Grid>
         </div>
       </Layout>
     );

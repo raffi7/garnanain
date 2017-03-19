@@ -68,7 +68,8 @@ class AboutPage extends React.Component {
        </h1>
         <div style={{
           width: '100%',
-          marginLeft: '40px'
+          marginLeft: '40px',
+          marginTop: '-20px'
         }}>
         <Grid className="demo-grid-1" style={{
         }}>
@@ -177,6 +178,19 @@ class AboutPage extends React.Component {
           </Cell>
           <Cell col={2}>
             <QButton text="30" onClick={() => this.makeSeen(30)} goto="/sport/29" seen={this.state.seen[30]}/>
+          </Cell>
+        </Grid>
+        <Grid className="demo-grid-1" style={{
+          marginTop: '5px'
+        }}>
+          <Cell col={2}>
+            <QButton text="31" onClick={() => this.makeSeen(31)} goto="/sport/30" seen={this.state.seen[31]}/>
+          </Cell>
+          <Cell col={2}>
+            <QButton text="32" onClick={() => this.makeSeen(32)} goto="/sport/31" seen={this.state.seen[32]}/>
+          </Cell>
+          <Cell col={2}>
+            <QButton text="33" onClick={() => this.makeSeen(33)} goto="/sport/32" seen={this.state.seen[33]}/>
           </Cell>
         </Grid>
             </div>
