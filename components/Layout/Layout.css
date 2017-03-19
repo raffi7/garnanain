@@ -20,6 +20,7 @@ min-height: 50px;
 background: #00838f;
 position: absolute;
 left: 9px;
+text-align: center;
 }
 
 .logo {
