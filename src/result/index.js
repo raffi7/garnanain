@@ -70,7 +70,7 @@ export default class Question extends React.Component {
            <Cell col={2} style={{marginTop: '-5px'}}>
              <Card shadow={0} style={{
                width: '170px',
-               minHeight: '20px',
+               minHeight: '35px',
                backgroundColor: team.color,
                marginLeft: '20px'
                }}>

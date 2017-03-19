@@ -49,13 +49,13 @@ const Teams = [
   },
   {
     id: 9,
-    name: 'Արցախ',
+    name: 'Հայաստան',
     color: '#FFF9C4',
     backColor: '#FDD835',
   },
   {
     id: 10,
-    name: '123456789',
+    name: 'Սևան',
     color: '#FFE0B2',
     backColor: '#FF6D00',
   },

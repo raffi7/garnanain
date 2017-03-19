@@ -15,11 +15,11 @@
 }
 
 .scoreBoard {
-width: 990px;
+width: 980px;
 min-height: 50px;
 background: #00838f;
 position: absolute;
-left: 9px;
+left: 20px;
 text-align: center;
 }
 
