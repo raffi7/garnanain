@@ -21,7 +21,9 @@ import {
   DialogContent,
   DialogActions
 } from 'react-mdl';
-import f from './f.ogg';
+import correct from './correct.mp3';
+import wrong from './wrong.mp3';
+
 
 class ResultDialog extends React.Component {
 
@@ -53,6 +55,14 @@ class ResultDialog extends React.Component {
     });
   }
   componentWillReceiveProps(nextProps) {
+    if(nextProps.correct) {
+      const audio = new Audio(correct);
+      audio.play();
+    }
+    else if(nextProps.wrong) {
+      const audio = new Audio(wrong);
+      audio.play();
+    }
     this.setState({
       openDialogCorrect: nextProps.correct,
       openDialogWrong: nextProps.wrong,
