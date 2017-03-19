@@ -57,7 +57,7 @@ export default class Question extends React.Component {
 
     return (
       <Layout className={s.content}>
-        <h1 className={s.fontstyle1} style={{ marginTop: '0px' }}>
+        <h1 className={s.fontstyle1} style={{ marginTop: '65px' }}>
           <IconButton name="arrow_back" colored onClick={this.gotoMusic} />
         </h1>
         <QMusic

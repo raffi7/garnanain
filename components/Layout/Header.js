@@ -12,6 +12,8 @@ import React from 'react';
 import Navigation from './Navigation';
 import Link from '../Link';
 import s from './Header.css';
+import logo from './logo.svg';
+
 
 class Header extends React.Component {
 
@@ -27,7 +29,8 @@ class Header extends React.Component {
     return (
       <header className={`mdl-layout__header ${s.header}`} ref={node => (this.root = node)}>
         <div className={`mdl-layout__header-row ${s.row}`}>
-          <Link className={`mdl-layout-title ${s.title}`} to="/">
+          <img className={s.logo} src={logo} alt="Smiley face" height="42" width="42" />
+          <Link style={{marginLeft: '70px'}} className={`mdl-layout-title ${s.title}`} to="/">
             Ն. Ջ. Հայ Մ. Մ. «Արարատ» Միութեան Ուսանողական Միաւոր
           </Link>
           <div className="mdl-layout-spacer"/>

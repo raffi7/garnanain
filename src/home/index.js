@@ -44,13 +44,12 @@ class AboutPage extends React.Component {
         <div style={{
           width: '100%',
           margin: 'auto',
-          marginTop: '110px'
+          marginTop: '120px'
         }}>
           <div className={s.musicControl}>
           <IconButton name="play_circle_outline" onClick={this.playSong} style={{ color: '#00838f' }} colored />
           </div>
-          <Grid className="demo-grid-1" style={{
-          }}>
+          <Grid className="demo-grid-1" >
             <Cell col={12}>
               <Card shadow={5} style={{
                 width: '358px',

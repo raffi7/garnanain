@@ -58,9 +58,10 @@ export default class Question extends React.Component {
 
     return (
       <Layout className={s.content}>
-        <h1 className={s.fontstyle1} style={{ marginTop: '0px' }}>
+        <h1 className={s.fontstyle1} style={{ marginTop: '65px' }}>
           <IconButton name="arrow_back" colored onClick={this.gotoImages} />
         </h1>
+        <div style={{marginTop: '-56px'}}>
         <QPicture
           answerPic={question.answerPic}
           questionPic={question.questionPic}
@@ -70,6 +71,7 @@ export default class Question extends React.Component {
           crct={this.correct}
           wrng={this.wrong}
         />
+      </div>
         <div style={{ marginLeft: '299px', marginTop: '15px' }}>
           <Timer timeout={10} pause={this.state.pauseTimer}/>
         </div>

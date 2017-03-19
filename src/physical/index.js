@@ -27,7 +27,7 @@ class AboutPage extends React.Component {
     document.body.style.backgroundColor = '#AA0000';
   }
   componentDidMount() {
-    document.title = 'ՖԻԶԻԿԱԿԱՆ';
+    document.title = 'Ֆիզիկական';
   }
   gotoCategories() {
     history.push({pathname: '/categories'}); // go to page function
@@ -41,14 +41,14 @@ class AboutPage extends React.Component {
     return (
       <Layout className={s.content}>
         <h1 className={s.fontstyle1} style={{
-          marginTop: '40px'
+          marginTop: '65px'
         }}><Grid className="demo-grid-1" style={{
           marginTop: '20px'
         }}>
           <Cell col={1}>
             <IconButton name="arrow_back" colored onClick={this.gotoCategories}/>
           </Cell>
-          <Cell col={1}>ՖԻԶԻԿԱԿԱՆ</Cell>
+          <Cell col={1}>Ֆիզիկական</Cell>
             </Grid>
        </h1>
         <div style={{

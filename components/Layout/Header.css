@@ -18,3 +18,10 @@
   .row {
     padding: 0 16px;
   }
+
+  .logo {
+    position: absolute;
+  height: 70px;
+  width: 70px;
+  top: .1px;
+  }

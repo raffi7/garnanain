@@ -21,7 +21,6 @@ import s from './Layout.css';
 import mainPic from './main.jpg';
 import teams from '../../src/teams';
 import adara from './adara.mp3';
-import logo from './logo.png';
 
 class Layout extends React.Component {
   static propTypes = {
@@ -69,7 +68,7 @@ class Layout extends React.Component {
           <Header />
           <main style={{ background: `url(${mainPic}) center / cover` }} className="mdl-layout__content">
             <Card shadow={3} className={s.scoreBoard}>
-              <div style={{width: '100%', margin: 'auto'}}>
+              <div style={{width: '100%', marginTop: '4px', marginBottom: '4px'}}>
 
                 {teams.map(team => (
                    <Chip
@@ -88,7 +87,6 @@ class Layout extends React.Component {
 
               </div>
             </Card>
-            <img className={s.logo} src={logo} alt="Smiley face" height="42" width="42" />
             <div {...this.props} className={cx(s.content, this.props.className)} />
           </main>
         </div>

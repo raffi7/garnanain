@@ -49,7 +49,7 @@ class AboutPage extends React.Component {
     return (
       <Layout className={s.content}>
         <h1 className={s.fontstyle1} style={{
-          marginTop: '35px'
+          marginTop: '65px'
         }}><Grid className="demo-grid-1" style={{
           marginTop: '20px'
         }}>
@@ -154,7 +154,7 @@ class AboutPage extends React.Component {
                 <CardActions border>
                   <Button colored style={{
                     fontSize: 20
-                  }} onClick={this.gotoPhysical}>ՖԻԶԻԿԱԿԱՆ</Button>
+                  }} onClick={this.gotoPhysical}>Ֆիզիկական</Button>
                 </CardActions>
               </Card>
             </Cell>

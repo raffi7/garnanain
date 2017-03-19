@@ -103,7 +103,7 @@ export default class Settings extends React.Component {
   render() {
     return (
       <Layout className={s.content}>
-        <h1 className={s.fontstyle1} style={{ marginTop: '45px' }}>
+        <h1 className={s.fontstyle1} style={{ marginTop: '65px' }}>
           <Grid className="demo-grid-2" style={{ marginTop: '10px' }}>
             <Cell col={1}>
               <IconButton name="home" colored onClick={this.gotoHome} />
@@ -116,7 +116,7 @@ export default class Settings extends React.Component {
             <List>
               <ListItem><span style={{ fontSize: '25px' }}>Score Manual Setting</span></ListItem>
               {teams.map(team => (
-                <Card shadow={2} style={{ width: '250px', minHeight: '50px', margin: '-12px', marginLeft: '-5px', marginTop: '15px'}}>
+                <Card shadow={2} style={{ width: '310px', minHeight: '50px', margin: '-12px', marginLeft: '-5px', marginTop: '15px'}}>
                  <ListItem key={team.id} style={{ marginTop: '-8px' }}>
                    <span style={{ marginRight: '20px' }}>
                      <FABButton onClick={() => this.dec(team)} colored style={{ color: '#eceff1', backgroundColor: '#f44336' }} mini>

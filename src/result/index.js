@@ -59,35 +59,28 @@ export default class Question extends React.Component {
   render() {
     return (
       <Layout className={s.content}>
-        <h1 className={s.fontstyle1} style={{
-          marginTop: '45px'
-        }}>
-        <Grid className="demo-grid-1" style={{
-          marginTop: '20px'
-        }}>
-          <Cell col={1}>
-            <IconButton name="home" colored onClick={this.gotoHome}/>
-          </Cell>
-          <Cell col={1}>Արդիւնքներ</Cell>
-            </Grid>
-       </h1>
 
+        <h1 className={s.fontstyle1} style={{
+          marginTop: '110px'
+        }}>
+
+        </h1>
        {teams.map(team => (
-         <Grid className="demo-grid-1">
-           <Cell col={1} style={{marginTop: '-5px'}}>
+         <Grid className="demo-grid-1" style={{marginTop: '-10px'}}>
+           <Cell col={2} style={{marginTop: '-5px'}}>
              <Card shadow={0} style={{
-               width: '100px',
-               minHeight: '40px',
+               width: '170px',
+               minHeight: '20px',
                backgroundColor: team.color,
                marginLeft: '20px'
                }}>
                <CardTitle expand style={{font: 'bold',fontSize: '30px', color: '#212121' ,padding: '5px',margin: 'auto'}}>{team.name}</CardTitle>
              </Card>
            </Cell>
-           <Cell col={1} style={{marginTop: '-5px',marginLeft: '40px'}}>
+           <Cell col={1} style={{marginTop: '-5px',marginLeft: '30px'}}>
              <Card shadow={2} style={{
-               width: (this.state.scores[team.id] || 0)*7.5,
-               minHeight: '40px',
+               width: (this.state.scores[team.id] || 0)*7.2,
+               minHeight: '20px',
                backgroundColor: team.backColor,
                marginLeft: '20px'
                }}>

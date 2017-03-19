@@ -51,7 +51,7 @@ export default class Question extends React.Component {
   render() {
     return (
       <Layout className={s.content}>
-        <h1 className={s.fontstyle1} style={{ marginTop: '20px' }}>
+        <h1 className={s.fontstyle1} style={{ marginTop: '55px' }}>
           <Grid className="demo-grid-1" style={{ marginTop: '20px' }}>
             <Cell col={1}>
               <IconButton name="arrow_back" colored onClick={this.gotoScience} />

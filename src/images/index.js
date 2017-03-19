@@ -56,7 +56,7 @@ class AboutPage extends React.Component {
         <h1 className={s.fontstyle1} style={{
           marginTop: '20px'
         }}><Grid className="demo-grid-1" style={{
-          marginTop: '30px'
+          marginTop: '65px'
         }}>
           <Cell col={1}>
             <IconButton name="arrow_back" colored onClick={this.gotoCategories}/>
