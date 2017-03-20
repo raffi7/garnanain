@@ -71,6 +71,13 @@ const Questions = [
     answerSong: require('./files/silva2.mp3'),
     songCover: require('./files/silva.jpg'),
   },
+  {
+    name: 'Cold Play -',
+    lastName: 'Hymn For The Weekend',
+    src: require('./files/cold.mp3'),
+    answerSong: require('./files/cold2.mp3'),
+    songCover: require('./files/cold.jpg'),
+  },
 ];
 
 export default Questions;

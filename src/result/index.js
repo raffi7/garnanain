@@ -69,7 +69,7 @@ export default class Question extends React.Component {
          <Grid className="demo-grid-1" style={{marginTop: '-10px'}}>
            <Cell col={2} style={{marginTop: '-5px'}}>
              <Card shadow={0} style={{
-               width: '170px',
+               width: '215px',
                minHeight: '35px',
                backgroundColor: team.color,
                marginLeft: '20px'
@@ -77,7 +77,7 @@ export default class Question extends React.Component {
                <CardTitle expand style={{font: 'bold',fontSize: '30px', color: '#212121' ,padding: '5px',margin: 'auto'}}>{team.name}</CardTitle>
              </Card>
            </Cell>
-           <Cell col={1} style={{marginTop: '-5px',marginLeft: '30px'}}>
+           <Cell col={1} style={{marginTop: '-5px',marginLeft: '65px'}}>
              <Card shadow={2} style={{
                width: (this.state.scores[team.id] || 0)*7.2,
                minHeight: '20px',

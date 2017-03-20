@@ -61,6 +61,12 @@ const Questions = [
     answerPic: require('./files/Հենրիկ Մխիթարյան.jpg'),
     questionPic: require('./files/Հենրիկ Մխիթարյան2.jpeg'),
   },
+  {
+    name: 'Լորիս',
+    lastName: 'Ճգնաւորեան',
+    answerPic: require('./files/Ճգնավորյան.jpg'),
+    questionPic: require('./files/Ճգնավորյան2.jpeg'),
+  },
 ];
 
 export default Questions;

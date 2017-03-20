@@ -578,57 +578,57 @@ const Questions = [
   },
   {
     id: 'Գ31',
-    text: 'Q',
+    text: 'Ո՞րն հունական դիցաբանութեան աստւածներից չէ։',
     answers: [
       {
-        text: 'A1',
+        text: 'Պերսևս (Perseus)',
         correct: true,
       }, {
-        text: 'A2',
+        text: 'Աֆրոդիտե (Aphrodite)',
         correct: false,
       }, {
-        text: 'A3',
+        text: 'Ապոլլոն (Apollo)',
         correct: false,
       }, {
-        text: 'A4',
+        text: 'Պոսեյդոն (Poseidon)',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ32',
-    text: 'Q',
+    text: 'Ու՞մ է պատկանում «Սամւել» վէպ։',
     answers: [
       {
-        text: 'A1',
+        text: 'Րաֆֆի',
         correct: true,
       }, {
-        text: 'A2',
+        text: 'Գ. Էմին',
         correct: false,
       }, {
-        text: 'A3',
+        text: 'Պ. Սևակ',
         correct: false,
       }, {
-        text: 'A4',
+        text: 'Ա. Իսահակեան',
         correct: false,
       },
     ],
   },
   {
     id: 'Գ33',
-    text: 'Q',
+    text: 'Ի՞նչ է նշանակում «Semester»:',
     answers: [
       {
-        text: 'A1',
+        text: 'Կիսամեակ',
         correct: true,
       }, {
-        text: 'A2',
+        text: 'քառամեակ',
         correct: false,
       }, {
-        text: 'A3',
+        text: 'եռամեակ',
         correct: false,
       }, {
-        text: 'A4',
+        text: 'ամեակ',
         correct: false,
       },
     ],

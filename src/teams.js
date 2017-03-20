@@ -7,13 +7,13 @@ const Teams = [
   },
   {
     id: 2,
-    name: 'ՀՄԱԿ',
+    name: 'Հ.Մ.Ա.Կ.',
     color: '#F8BBD0',
     backColor: '#EC407A',
   },
   {
     id: 3,
-    name: 'Սիփան',
+    name: 'Գիւմրի',
     color: '#E1BEE7',
     backColor: '#8E24AA',
   },
@@ -25,19 +25,19 @@ const Teams = [
   },
   {
     id: 5,
-    name: 'Չարմահալ',
+    name: 'Չհարմահալ',
     color: '#BBDEFB',
     backColor: '#1976D2',
   },
   {
     id: 6,
-    name: 'Նայրի',
+    name: 'Նայիրի',
     color: '#B2EBF2',
     backColor: '#00ACC1',
   },
   {
     id: 7,
-    name: 'Գարդաբադ',
+    name: 'Ուրմիա',
     color: '#C8E6C9',
     backColor: '#43A047',
   },
@@ -49,7 +49,7 @@ const Teams = [
   },
   {
     id: 9,
-    name: 'Հայաստան',
+    name: 'Սարդարապատ',
     color: '#FFF9C4',
     backColor: '#FDD835',
   },
@@ -61,7 +61,7 @@ const Teams = [
   },
   {
     id: 11,
-    name: '123456789',
+    name: 'Շ.Շ. Արարատ',
     color: '#D7CCC8',
     backColor: '#6D4C41',
   },
