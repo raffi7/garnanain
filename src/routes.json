@@ -62,6 +62,10 @@
     "page": "./M1"
   },
   {
+    "path": "/testpage",
+    "page": "./testpage"
+  },
+  {
     "path": "/tasks/:status(pending|completed)?",
     "page": "./home"
   }

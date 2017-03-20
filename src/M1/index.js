@@ -60,6 +60,7 @@ export default class Question extends React.Component {
         <h1 className={s.fontstyle1} style={{ marginTop: '65px' }}>
           <IconButton name="arrow_back" colored onClick={this.gotoMusic} />
         </h1>
+        <div style={{ marginTop: '-30px' }}>
         <QMusic
           src={question.src}
           answerSong={question.answerSong}
@@ -70,7 +71,7 @@ export default class Question extends React.Component {
           seen={this.state.seen}
           crct={this.correct}
           wrng={this.wrong}
-        />
+        /></div>
         <ResultDialog score="" correct={this.state.openDialogCorrect} wrong={this.state.openDialogWrong} />
       </Layout>
     );

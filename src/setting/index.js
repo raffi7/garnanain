@@ -116,13 +116,13 @@ export default class Settings extends React.Component {
             <List>
               <ListItem><span style={{ fontSize: '25px' }}>Score Manual Setting</span></ListItem>
               {teams.map(team => (
-                <Card shadow={2} style={{ width: '310px', minHeight: '50px', margin: '-12px', marginLeft: '-5px', marginTop: '15px'}}>
+                <Card shadow={2} style={{ width: '360px', minHeight: '50px', margin: '-12px', marginLeft: '-5px', marginTop: '15px'}}>
                  <ListItem key={team.id} style={{ marginTop: '-8px' }}>
                    <span style={{ marginRight: '20px' }}>
                      <FABButton onClick={() => this.dec(team)} colored style={{ color: '#eceff1', backgroundColor: '#f44336' }} mini>
-                       -5 </FABButton>
+                       <Icon name="remove" /> </FABButton>
                      <FABButton onClick={() => this.inc(team)} colored mini style={{ color: '#eceff1', backgroundColor: '#388e3c', marginLeft: '5px' }} >
-                       +5 </FABButton>
+                       <Icon name="add" /> </FABButton>
                    </span>
                    <span style={{ color: team.backColor, fontSize: '25px'}}>{team.name}</span>
                  </ListItem></Card>
@@ -135,7 +135,7 @@ export default class Settings extends React.Component {
               <ListItem>
                 <span style={{ marginRight: '20px' }}>
                   <FABButton onClick={this.clearDb} colored style={{ color: '#37474f', backgroundColor: '#eceff1' }} mini>
-                    <Icon name="delete" />
+                    <Icon name="delete_sweep" />
                   </FABButton>
                 </span>
                 Clear Question Arrangement
@@ -143,7 +143,7 @@ export default class Settings extends React.Component {
               <ListItem>
                 <span style={{ marginRight: '20px' }}>
                   <FABButton onClick={this.clearScoreDb} colored style={{ color: '#37474f', backgroundColor: '#eceff1' }} mini>
-                    <Icon name="delete" />
+                    <Icon name="delete_sweep" />
                   </FABButton>
                 </span>
                 Clear Score Arrangement

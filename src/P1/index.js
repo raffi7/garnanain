@@ -61,7 +61,7 @@ export default class Question extends React.Component {
         <h1 className={s.fontstyle1} style={{ marginTop: '65px' }}>
           <IconButton name="arrow_back" colored onClick={this.gotoImages} />
         </h1>
-        <div style={{marginTop: '-56px'}}>
+        <div style={{marginTop: '-65px'}}>
         <QPicture
           answerPic={question.answerPic}
           questionPic={question.questionPic}
@@ -72,7 +72,7 @@ export default class Question extends React.Component {
           wrng={this.wrong}
         />
       </div>
-        <div style={{ marginLeft: '299px', marginTop: '15px' }}>
+        <div style={{ marginLeft: '299px', marginTop: '12px' }}>
           <Timer timeout={10} pause={this.state.pauseTimer}/>
         </div>
         <ResultDialog score="10" correct={this.state.openDialogCorrect} wrong={this.state.openDialogWrong} />

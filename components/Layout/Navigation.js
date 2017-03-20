@@ -12,6 +12,7 @@ import React from 'react';
 import history from '../../src/history';
 import Link from '../Link';
 import {IconButton, MenuItem, Menu, Tooltip, Icon } from 'react-mdl';
+import click from './click.mp3';
 
 class Navigation extends React.Component {
 
@@ -23,7 +24,9 @@ class Navigation extends React.Component {
     window.componentHandler.downgradeElements(this.root);
   }
   gotoResult() {
+    const audio = new Audio(click);
     history.push({ pathname: '/result' });
+    audio.play();
   }
   gotoSetting() {
     history.push({ pathname: '/setting' });
