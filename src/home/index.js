@@ -18,7 +18,7 @@ import {
 import db from 'localforage';
 import Layout from '../../components/Layout';
 import s from './styles.css';
-import homepic from './29G.jpg';
+import homepic from './main.gif';
 import Link from '../../components/Link';
 import history from '../history';
 import backSong from './backSong.mp3';
@@ -52,7 +52,7 @@ class AboutPage extends React.Component {
           <Grid className="demo-grid-1" >
             <Cell col={12}>
               <Card shadow={5} style={{
-                width: '358px',
+                width: '500px',
                 margin: 'auto',
               }}>
                 <CardTitle style={{
