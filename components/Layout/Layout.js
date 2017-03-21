@@ -78,10 +78,11 @@ class Layout extends React.Component {
                    >
                      <ChipContact
                        className="mdl-color mdl-color-text--white"
-                       style={{ backgroundColor: team.backColor }}
+                       style={{ backgroundColor: team.backColor}}
                      >
-                       {this.state.scores[team.id]}</ChipContact>
-                     {team.name}
+                       {this.state.scores[team.id]}
+                     </ChipContact>
+                     <div style={{fontSize: '29px', fontFamily: 'ArTarumianMatenagir'}}>{team.name}</div>
                    </Chip>
                  ))}
 

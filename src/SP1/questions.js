@@ -573,57 +573,57 @@ const Questions = [
   },
   {
     id: 'Մ31',
-    text: 'Q',
+    text: 'Լող մարզաձևը բաղկացածէ քանի՞ հիմնական մրցոյթաշարից:',
     answers: [
       {
-        text: 'A1',
+        text: '4',
         correct: true,
       }, {
-        text: 'A2',
+        text: '3',
         correct: false,
       }, {
-        text: 'A3',
+        text: '6',
         correct: false,
       }, {
-        text: 'A4',
+        text: '5',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ32',
-    text: 'Q',
+    text: 'Իրանի միակ յաղթանակը համաշխարհային մրցանակի գաւաթ (جام جهانی) մրցաշարում ո՞ր հաւաքականի նկատմամբ էր:',
     answers: [
       {
-        text: 'A1',
+        text: 'Ա.Մ.Ն.',
         correct: true,
       }, {
-        text: 'A2',
+        text: 'Անգուլա',
         correct: false,
       }, {
-        text: 'A3',
+        text: 'Նիջեռիէ',
         correct: false,
       }, {
-        text: 'A4',
+        text: 'Բոսնի',
         correct: false,
       },
     ],
   },
   {
     id: 'Մ33',
-    text: 'Q',
+    text: 'Նախքան Րէալ Մադրիդ, Ռոնալդոն խաղում է՞ր..',
     answers: [
       {
-        text: 'A1',
+        text: 'Մանչեսթր',
         correct: true,
       }, {
-        text: 'A2',
+        text: 'Բայեռն Մունիխ',
         correct: false,
       }, {
-        text: 'A3',
+        text: 'Չելսի',
         correct: false,
       }, {
-        text: 'A4',
+        text: 'Միլան',
         correct: false,
       },
     ],
