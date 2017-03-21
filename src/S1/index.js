@@ -3,6 +3,11 @@ import {
   IconButton,
   Grid,
   Cell,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  Button,
   Icon,
 } from 'react-mdl';
 import { shuffle } from 'underscore';
@@ -20,6 +25,7 @@ export default class Question extends React.Component {
     this.state = {
       openDialogCorrect: false,
       openDialogWrong: false,
+      openDialogWait: false,
       reveal: false,
       pauseTimer: false,
     };
@@ -35,13 +41,18 @@ export default class Question extends React.Component {
     document.title = this.question.id;
   }
 
-  answer = (correct) => {
+  showResult = (correct) => {
     this.setState({
       openDialogCorrect: correct,
       openDialogWrong: !correct,
+      openDialogWait: false,
       reveal: true,
-      pauseTimer: true,
     });
+  }
+
+  answer = (correct) => {
+    this.setState({ openDialogWait: true, pauseTimer: true });
+    setTimeout(this.showResult, 3000, correct);
   }
 
   gotoScience = () => {
@@ -89,6 +100,17 @@ export default class Question extends React.Component {
 
         </Grid>
         <div style={{ marginLeft: '299px', marginTop: '15px' }}> <Timer timeout={20} pause={this.state.pauseTimer} /></div>
+
+        <Dialog style={{ backgroundColor: '#f0f423' }} open={this.state.openDialogWait}>
+          <DialogTitle style={{ color: '#fff', fontSize: '50px' }} >Wait!!</DialogTitle>
+          <DialogContent>
+            <p style={{ color: '#263238', fontSize: '25px', marginTop: '15px' }}>0 Նիշ</p>
+          </DialogContent>
+          <DialogActions>
+            <Button type="button" onClick={this.handleCloseDialog}>Close</Button>
+          </DialogActions>
+        </Dialog>
+
         <ResultDialog score="5" correct={this.state.openDialogCorrect} wrong={this.state.openDialogWrong} />
       </Layout>
     );
