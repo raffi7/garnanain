@@ -6,9 +6,8 @@ import {
   Dialog,
   DialogTitle,
   DialogContent,
-  DialogActions,
-  Button,
   Icon,
+  Spinner,
 } from 'react-mdl';
 import { shuffle } from 'underscore';
 import Layout from '../../components/Layout';
@@ -18,6 +17,7 @@ import AnswerCard from '../../components/AnswerCard';
 import history from '../history';
 import Timer from '../../components/Timer';
 import Questions from './questions';
+import time from './time.gif';
 
 export default class Question extends React.Component {
   constructor(props) {
@@ -52,7 +52,7 @@ export default class Question extends React.Component {
 
   answer = (correct) => {
     this.setState({ openDialogWait: true, pauseTimer: true });
-    setTimeout(this.showResult, 3000, correct);
+    setTimeout(this.showResult, 2500, correct);
   }
 
   gotoScience = () => {
@@ -100,15 +100,7 @@ export default class Question extends React.Component {
 
         </Grid>
         <div style={{ marginLeft: '299px', marginTop: '15px' }}> <Timer timeout={20} pause={this.state.pauseTimer} /></div>
-
-        <Dialog style={{ backgroundColor: '#f0f423' }} open={this.state.openDialogWait}>
-          <DialogTitle style={{ color: '#fff', fontSize: '50px' }} >Wait!!</DialogTitle>
-          <DialogContent>
-            <p style={{ color: '#263238', fontSize: '25px', marginTop: '15px' }}>0 Նիշ</p>
-          </DialogContent>
-          <DialogActions>
-            <Button type="button" onClick={this.handleCloseDialog}>Close</Button>
-          </DialogActions>
+        <Dialog style={{ textAlign: 'center', background: `url(${time}) center / cover`, minHeight: '200px' }} open={this.state.openDialogWait}>
         </Dialog>
 
         <ResultDialog score="5" correct={this.state.openDialogCorrect} wrong={this.state.openDialogWrong} />

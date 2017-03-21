@@ -20,7 +20,7 @@ import Header from './Header';
 import s from './Layout.css';
 import mainPic from './main.jpg';
 import teams from '../../src/teams';
-import adara from './adara.mp3';
+import mira from './Mira.ogg';
 
 class Layout extends React.Component {
   static propTypes = {
@@ -46,7 +46,7 @@ class Layout extends React.Component {
 
   addScore = (n) => {
     const scores = this.state.scores;
-    const audio = new Audio(adara);
+    const audio = new Audio(mira);
     audio.play();
     scores[n] = (scores[n] || 0) + 5;
     this.setState({ scores });

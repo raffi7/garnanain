@@ -73,7 +73,7 @@ class ResultDialog extends React.Component {
     return (
       <div>
       <Dialog style={{backgroundColor: '#8bc34a'}} open={this.state.openDialogCorrect}>
-        <DialogTitle style={{color: '#fff', fontSize: '50px'}} >Correct !!</DialogTitle>
+        <DialogTitle style={{color: '#fff', fontSize: '50px',textAlign: 'center'}} >Correct !!</DialogTitle>
         <DialogContent>
           <p style={{color: '#263238', fontSize: '25px', marginTop: '15px'}}>+{this.props.score} Նիշ</p>
         </DialogContent>
@@ -82,7 +82,7 @@ class ResultDialog extends React.Component {
         </DialogActions>
       </Dialog>
       <Dialog style={{backgroundColor: '#f44336'}} open={this.state.openDialogWrong}>
-        <DialogTitle style={{color: '#fff', fontSize: '50px'}} >Wrong !!</DialogTitle>
+        <DialogTitle style={{color: '#fff', fontSize: '50px',textAlign: 'center'}} >Wrong !!</DialogTitle>
         <DialogContent>
           <p style={{color: '#263238', fontSize: '25px', marginTop: '15px'}}>0 Նիշ</p>
         </DialogContent>

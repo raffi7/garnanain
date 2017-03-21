@@ -3,7 +3,11 @@ import {
   IconButton,
   Grid,
   Cell,
+  Dialog,
+  DialogTitle,
+  DialogContent,
   Icon,
+  Spinner,
 } from 'react-mdl';
 import { shuffle } from 'underscore';
 import Layout from '../../components/Layout';
@@ -13,6 +17,7 @@ import AnswerCard from '../../components/AnswerCard';
 import history from '../history';
 import Timer from '../../components/Timer';
 import Questions from './questions';
+import time from './time.gif';
 
 export default class Question extends React.Component {
   constructor(props) {
@@ -20,6 +25,7 @@ export default class Question extends React.Component {
     this.state = {
       openDialogCorrect: false,
       openDialogWrong: false,
+      openDialogWait: false,
       reveal: false,
       pauseTimer: false,
     };
@@ -34,14 +40,18 @@ export default class Question extends React.Component {
   componentDidMount() {
     document.title = this.question.id;
   }
-
-  answer = (correct) => {
+  showResult = (correct) => {
     this.setState({
       openDialogCorrect: correct,
       openDialogWrong: !correct,
+      openDialogWait: false,
       reveal: true,
-      pauseTimer: true,
     });
+  }
+
+  answer = (correct) => {
+    this.setState({ openDialogWait: true, pauseTimer: true });
+    setTimeout(this.showResult, 2500, correct);
   }
 
   gotoSport = () => {
@@ -56,7 +66,9 @@ export default class Question extends React.Component {
             <Cell col={1}>
               <IconButton name="arrow_back" colored onClick={this.gotoSport} />
             </Cell>
-            <Cell col={11} className={s.ScienceQuestionFont} style={{ fontSize: this.question.fontsize}}>{this.question.text}</Cell>
+            <Cell col={11} className={s.ScienceQuestionFont}
+              style={{ fontSize: this.question.fontsize}}>{this.question.text}
+            </Cell>
           </Grid>
         </h1>
         <Grid style={{ fontSize: '30px', marginTop: '50px',marginBottom: '-47px'  }} className="demo-grid-1">
@@ -89,7 +101,10 @@ export default class Question extends React.Component {
 
         </Grid>
         <div style={{ marginLeft: '299px', marginTop: '15px' }}> <Timer timeout={20} pause={this.state.pauseTimer} /></div>
-        <ResultDialog score="5" correct={this.state.openDialogCorrect} wrong={this.state.openDialogWrong} />
+          <Dialog style={{ textAlign: 'center',background: `url(${time}) center / cover`, minHeight: '200px' }} open={this.state.openDialogWait}>
+          </Dialog>
+          <ResultDialog score="5" correct={this.state.openDialogCorrect} wrong={this.state.openDialogWrong} />
+
       </Layout>
     );
   }
