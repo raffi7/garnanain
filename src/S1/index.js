@@ -99,7 +99,7 @@ export default class Question extends React.Component {
             ))}
 
         </Grid>
-        <div style={{ marginLeft: '299px', marginTop: '15px' }}> <Timer timeout={20} pause={this.state.pauseTimer} /></div>
+        <div style={{ marginLeft: '299px', marginTop: '15px' }}> <Timer timeout={25} pause={this.state.pauseTimer} /></div>
         <Dialog style={{ textAlign: 'center', background: `url(${time}) center / cover`, minHeight: '200px' }} open={this.state.openDialogWait}>
         </Dialog>
 

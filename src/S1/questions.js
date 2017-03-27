@@ -1,3 +1,4 @@
+// chentrvax HARXER: 3,4,17,19,20,21,22,25,27,28,31,32
 const Questions = [
   {
     id: 'Գ1',

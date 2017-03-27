@@ -111,7 +111,7 @@ export default class Settings extends React.Component {
             <Cell col={1}>Setting</Cell>
           </Grid>
         </h1>
-        <Grid className="demo-grid-2" style={{ marginTop: '-45px' }}>
+        <Grid className="demo-grid-2" style={{ marginTop: '-60px' }}>
           <Cell style={{margin: '-5px'}} col={6}>
             <List>
               <ListItem><span style={{ fontSize: '25px' }}>Score Manual Setting</span></ListItem>

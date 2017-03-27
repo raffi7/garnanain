@@ -30,7 +30,7 @@ class AboutPage extends React.Component {
     return (
       <Layout className={s.content}>
         <h1 className={s.fontstyle1} style={{
-          marginTop: '50px'
+          marginTop: '-3px'
         }}><Grid className="demo-grid-1" style={{
           marginTop: '20px'
         }}>

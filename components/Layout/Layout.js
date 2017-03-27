@@ -82,7 +82,7 @@ class Layout extends React.Component {
                      >
                        {this.state.scores[team.id]}
                      </ChipContact>
-                     <div style={{fontSize: '29px', fontFamily: 'ArTarumianMatenagir'}}>{team.name}</div>
+                     <div style={{fontSize: '21px', fontFamily: 'ArTarumianMatenagir'}}>{team.name}</div>
                    </Chip>
                  ))}
 
